@@ -3,7 +3,7 @@ import './App.css'
 import { BrowserRouter as Router,  Routes , Route} from 'react-router-dom'
 import Login from './pages/login/login'
 import Home from './pages/home/home'
-
+import Adm from './pages/adm/adm'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +15,7 @@ function App() {
             <Routes>
               <Route path="/" element= {<Login/>} />
               <Route path="/home" element= {<Home/>} />
+              <Route path="/adm" element= {<Adm/>} />
             
             </Routes>
         </Router>

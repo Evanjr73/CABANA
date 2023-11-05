@@ -1,0 +1,19 @@
+#opçoes{
+
+  
+    display: flex;
+    height: 135px;
+    flex-direction: column;
+
+    
+     
+ }
+
+.butto{
+    width: 47%;
+    height: 50px;
+    margin: auto;
+}
+#bttn-op{
+    display: flex;
+}

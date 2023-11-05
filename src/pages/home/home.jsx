@@ -1,6 +1,7 @@
 
-import imagem from "./foto.png";
-import comida from "./comidas.png"
+
+import Nav from "../../frag/nav";
+import Cardapio from "../../frag/cardapio";
 import "./home.css"
 // import image from "next/image"
 
@@ -24,11 +25,7 @@ function Home(){
     
 
       <>
-            <nav>
-                  <h1>RESTAURANTE</h1>
-                  
-            </nav>
-
+            <Nav></Nav>
             <div id="containerHome">
                   <div>
                        
@@ -43,56 +40,8 @@ function Home(){
       <main> 
         <h1>CARDAPIO</h1>
     </main>
-    <div id="opçoes">
-        <button className="butto" >COMIDAS</button>
-        <button className="butto" >BEBIDAS</button>
-    </div>
-    
-    <ul id="BEBIDAS">
-        
-        <li id="" className="listadebebidas"><p>ice drink</p><img src={imagem} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17" >SOBRE O PRATO</button></li>
-        <li id="" className="listadebebidas"><p>ice drink</p><img src={imagem} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17" >SOBRE O PRATO</button></li>
-        <li id="" className="listadebebidas"><p>ice drink</p><img src={imagem} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17" >SOBRE O PRATO</button></li>
-        <li id="" className="listadebebidas"><p>ice drink</p><img src={imagem} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17" >SOBRE O PRATO</button></li>
-        <li id="" className="listadebebidas"><p>ice drink</p><img src={imagem} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17" >SOBRE O PRATO</button></li>
-        <li id="" className="listadebebidas"><p>ice drink</p><img src={imagem} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17" >SOBRE O PRATO</button></li>
-        <li id="" className="listadebebidas"><p>ice drink</p><img src={imagem} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17" >SOBRE O PRATO</button></li>
-        <li id="" className="listadebebidas"><p>ice drink</p><img src={imagem} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17" >SOBRE O PRATO</button></li>
-        <li id="" className="listadebebidas"><p>ice drink</p><img src={imagem} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17" >SOBRE O PRATO</button></li>
-        <li id="" className="listadebebidas"><p>ice drink</p><img src={imagem} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17" >SOBRE O PRATO</button></li>
-        <li id="" className="listadebebidas"><p>ice drink</p><img src={imagem} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17" >SOBRE O PRATO</button></li>
-        <li id="" className="listadebebidas"><p>ice drink</p><img src={imagem} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17" >SOBRE O PRATO</button></li>
-        <li id="" className="listadebebidas"><p>ice drink</p><img src={imagem} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17" >SOBRE O PRATO</button></li>
-        <li id="" className="listadebebidas"><p>ice drink</p><img src={imagem} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17" >SOBRE O PRATO</button></li>
-        <li id="" className="listadebebidas"><p>ice drink</p><img src={imagem} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17" >SOBRE O PRATO</button></li>
-        <li id="" className="listadebebidas"><p>ice drink</p><img src={imagem} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17" >SOBRE O PRATO</button></li>
-        <li id="" className="listadebebidas"><p>ice drink</p><img src={imagem} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17" >SOBRE O PRATO</button></li>
-        <li id="" className="listadebebidas"><p>ice drink</p><img src={imagem} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17" >SOBRE O PRATO</button></li>
-        <li id="" className="listadebebidas"><p>ice drink</p><img src={imagem} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17" >SOBRE O PRATO</button></li>
-        <li id="" className="listadebebidas"><p>ice drink</p><img src={imagem} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17" >SOBRE O PRATO</button></li>
-    </ul>
-    <ul id="COMIDAS" >
-        <li id="" className="listadecomidas"  ><p>peixe assado </p><img src={comida} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17">SOBRE O PRATO</button></li>
-        <li id="" className="listadecomidas"  ><p>peixe assado </p><img src={comida} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17">SOBRE O PRATO</button></li>
-        <li id="" className="listadecomidas"  ><p>peixe assado </p><img src={comida} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17">SOBRE O PRATO</button></li>
-        <li id="" className="listadecomidas"  ><p>peixe assado </p><img src={comida} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17">SOBRE O PRATO</button></li>
-        <li id="" className="listadecomidas"  ><p>peixe assado </p><img src={comida} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17">SOBRE O PRATO</button></li>
-        <li id="" className="listadecomidas"  ><p>peixe assado </p><img src={comida} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17">SOBRE O PRATO</button></li>
-        <li id="" className="listadecomidas"  ><p>peixe assado </p><img src={comida} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17">SOBRE O PRATO</button></li>
-        <li id="" className="listadecomidas"  ><p>peixe assado </p><img src={comida} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17">SOBRE O PRATO</button></li>
-        <li id="" className="listadecomidas"  ><p>peixe assado </p><img src={comida} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17">SOBRE O PRATO</button></li>
-        <li id="" className="listadecomidas"  ><p>peixe assado </p><img src={comida} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17">SOBRE O PRATO</button></li>
-        <li id="" className="listadecomidas"  ><p>peixe assado </p><img src={comida} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17">SOBRE O PRATO</button></li>
-        <li id="" className="listadecomidas"  ><p>peixe assado </p><img src={comida} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17">SOBRE O PRATO</button></li>
-        <li id="" className="listadecomidas"  ><p>peixe assado </p><img src={comida} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17">SOBRE O PRATO</button></li>
-        <li id="" className="listadecomidas"  ><p>peixe assado </p><img src={comida} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17">SOBRE O PRATO</button></li>
-        <li id="" className="listadecomidas"  ><p>peixe assado </p><img src={comida} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17">SOBRE O PRATO</button></li>
-        <li id="" className="listadecomidas"  ><p>peixe assado </p><img src={comida} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17">SOBRE O PRATO</button></li>
-        <li id="" className="listadecomidas"  ><p>peixe assado </p><img src={comida} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17">SOBRE O PRATO</button></li>
-        <li id="" className="listadecomidas"  ><p>peixe assado </p><img src={comida} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17">SOBRE O PRATO</button></li>
-        <li id="" className="listadecomidas"  ><p>peixe assado </p><img src={comida} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17">SOBRE O PRATO</button></li>
-        <li id="" className="listadecomidas"  ><p>peixe assado </p><img src={comida} className="imagensdocardapio" alt=""/> <button className="button-17">FAZER PEDIDO</button> <button className="button-17">SOBRE O PRATO</button></li>
-    </ul>
+  <Cardapio></Cardapio>
+   
             
       </>
           )

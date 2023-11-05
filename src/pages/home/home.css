@@ -19,19 +19,8 @@ main{
     background-color: white;
     height: 7vh;
 }
-#opçoes{
 
-  
-   display: flex;
-   height: 135px;
-   
-    
-}
-.butto{
-    width: 47%;
-    height: 50px;
-    margin: auto;
-}
+
 
 
 ul{
