@@ -4,14 +4,12 @@ import "./cardapio.css"
 
 function Cardapio() {
 
+   
     return (
         <div id="opçoes">
 
-            <div id="bttn-op">
-                <button className="butto" >COMIDAS</button>
-                <button className="butto" >BEBIDAS</button>
-            </div>
-
+            
+          
             <ul id="BEBIDAS">
 
                 <li id="" className="listadebebidas"><p>ice drink</p><img src={imagem} className="imagensdocardapio" alt="" /> <button className="button-17">FAZER PEDIDO</button> <button className="button-17" >SOBRE O PRATO</button></li>
