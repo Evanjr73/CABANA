@@ -1,6 +1,6 @@
 import imagem from "./foto.png";
 import comida from "./comidas.png"
-import "./cardapio.css"
+// import "./cardapio.css"
 
 function Cardapio() {
 
