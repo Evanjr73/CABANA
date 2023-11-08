@@ -10,16 +10,21 @@ nav{
 
 }
 #imghome{
+
     height: 60vh;
     width: 100vw;
 }
 main{
+    display: flex;
+    justify-content: center;
     text-align: center;
     padding: 15px;
     background-color: white;
     height: 7vh;
 }
-
+#opçoes{
+  transition: 5s;
+}
 
 
 
@@ -57,6 +62,7 @@ li{
 }
 .opcoens{
     display: flex;
+    transition: 1s;
 }
 
 

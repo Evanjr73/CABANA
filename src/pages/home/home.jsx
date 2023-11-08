@@ -18,6 +18,24 @@ function Home() {
 
       const [bebidas, setBebidas] = useState("grid");
       const [comidas, setComidas] = useState("grid");
+      const [menu, setMenu] = useState("none");
+      const [buton, setButon] = useState("flex");
+      const [buto, setButo] = useState("none");
+
+
+      const handleClickMenu = () => {
+            setButon("none")
+            setMenu("flex")
+            setButo("flex")
+
+      }
+      const handleClickMen = () => {
+            setButon("flex")
+            setMenu("none")
+            setButo("none")
+
+      }
+
       const handleClickComidas = () => {
             setBebidas("none"), setComidas("grid")
             console.log("ola ")
@@ -29,6 +47,8 @@ function Home() {
             console.log("ola mundo")
 
       }
+
+
 
       return (
 
@@ -47,14 +67,17 @@ function Home() {
                   </div>
 
                   <main>
-                        <h1>CARDAPIO</h1>
+                        <h1></h1>
+                        <button className="butt" onClick={handleClickMen} style={{display: buto}}>X</button>
+                        <button className="butt" onClick={handleClickMenu} style={{display: buton}}>CARDAPIO</button>
                   </main>
-                  <div id="bttn-op" className="tabs">
+
+                  <div id="bttn-op" className="tabs" style={{ display: menu }} >
                         <button className="butto" onClick={handleClickComidas}  >COMIDAS</button>
                         <button className="butto" onClick={handleClickBebidas} >BEBIDAS</button>
                   </div>
 
-                  <div id="opçoes">
+                  <div id="opçoes" style={{ display: menu }}>
 
 
 
@@ -103,55 +126,56 @@ function Home() {
                               <li id="" className="listadecomidas"  >
                                     <p>peixe assado </p>
                                     <img src={comida} className="imagensdocardapio" alt="" />
-                                     {/* <button className="button-17">FAZER PEDIDO</button> */}
-                                      <p>30 R$</p>
+                                    {/* <button className="button-17">FAZER PEDIDO</button> */}
+                                    <p>30 R$</p>
 
-                                      <button className="button-17">SOBRE O PRATO</button>
-                                      </li>
-
-
-                              <li id="" className="listadecomidas"  >
-                                    <p>peixe assado </p>
-                                    <img src={comida} className="imagensdocardapio" alt="" />
-                                     {/* <button className="button-17">FAZER PEDIDO</button> */}
-                                      <p>30 R$</p>
-
-                                      <button className="button-17">SOBRE O PRATO</button>
-                                      </li>
+                                    <button className="button-17">SOBRE O PRATO</button>
+                              </li>
 
 
                               <li id="" className="listadecomidas"  >
                                     <p>peixe assado </p>
                                     <img src={comida} className="imagensdocardapio" alt="" />
-                                     {/* <button className="button-17">FAZER PEDIDO</button> */}
-                                      <p>30 R$</p>
+                                    {/* <button className="button-17">FAZER PEDIDO</button> */}
+                                    <p>30 R$</p>
 
-                                      <button className="button-17">SOBRE O PRATO</button>
-                                      </li>
+                                    <button className="button-17">SOBRE O PRATO</button>
+                              </li>
 
 
                               <li id="" className="listadecomidas"  >
                                     <p>peixe assado </p>
                                     <img src={comida} className="imagensdocardapio" alt="" />
-                                     {/* <button className="button-17">FAZER PEDIDO</button> */}
-                                      <p>30 R$</p>
+                                    {/* <button className="button-17">FAZER PEDIDO</button> */}
+                                    <p>30 R$</p>
 
-                                      <button className="button-17">SOBRE O PRATO</button>
-                                      </li>
+                                    <button className="button-17">SOBRE O PRATO</button>
+                              </li>
+
+
+                              <li id="" className="listadecomidas"  >
+                                    <p>peixe assado </p>
+                                    <img src={comida} className="imagensdocardapio" alt="" />
+                                    {/* <button className="button-17">FAZER PEDIDO</button> */}
+                                    <p>30 R$</p>
+
+                                    <button className="button-17">SOBRE O PRATO</button>
+                              </li>
 
 
 
                         </ul>
+
                         <Footer></Footer>
                   </div>
 
-                 
+
 
                   {/* <Cardapio></Cardapio> */}
 
 
             </>
-            
+
       )
 }
 
