@@ -10,6 +10,8 @@ import imagem from "./foto.png";
 import comida from "./comidas.png"
 import "./cardapio.css"
 
+import Footer from "../../frag/frags/footer";
+
 
 
 function Home() {
@@ -140,14 +142,16 @@ function Home() {
 
 
                         </ul>
+                        <Footer></Footer>
                   </div>
 
-
+                 
 
                   {/* <Cardapio></Cardapio> */}
 
 
             </>
+            
       )
 }
 

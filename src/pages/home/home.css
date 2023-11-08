@@ -24,6 +24,7 @@ main{
 
 
 ul{
+    transition: 1s;
     padding: 10px;
     margin-right: 20px;
     display: grid;
@@ -38,20 +39,21 @@ p{
     height: 10px;
 }
 li{
+    
     display: grid;
     justify-items: center;
     gap: 0px;
     grid-template-columns: repeat(1, 1fr);
     background-color: rgb(218, 216, 216);
-    height: 45vh;
+    height: 32vh;
     width: 21vh;
-    padding: 5px;
+    padding: 2px;
     border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .imagensdocardapio{
     width: 20vh;
-    height: 25vh;
+    height: 19vh;
 }
 .opcoens{
     display: flex;
