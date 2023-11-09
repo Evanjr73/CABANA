@@ -67,7 +67,7 @@ function Home() {
                   </div>
 
                   <main>
-                        <h1></h1>
+                        
                         <button className="butt" onClick={handleClickMen} style={{display: buto}}>X</button>
                         <button className="butt" onClick={handleClickMenu} style={{display: buton}}>CARDAPIO</button>
                   </main>
