@@ -166,10 +166,10 @@ function Home() {
 
                         </ul>
 
-                        <Footer></Footer>
+                        
                   </div>
 
-
+                  
 
                   {/* <Cardapio></Cardapio> */}
 

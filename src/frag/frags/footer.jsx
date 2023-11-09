@@ -5,7 +5,7 @@ function Footer(){
 
 
     return(
-        <footer id="foote">
+        <footer id="foote" >
             <h1>ola mundo</h1>
         </footer>
     )
