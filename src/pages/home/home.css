@@ -64,6 +64,13 @@ li{
     border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+.grid-menu{
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  justify-items: center;
+  align-items: center;
+    
+}
 .imagensdocardapio{
     width: 20vh;
     height: 19vh;
