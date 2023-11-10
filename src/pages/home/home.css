@@ -38,7 +38,7 @@ main{
 
 ul{
     transition: 1s;
-    padding: 10px;
+    padding: 0px;
     margin-right: 20px;
     display: grid;
     justify-items: center;
@@ -65,6 +65,7 @@ li{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .grid-menu{
+  margin: 0;
   display: grid;
   grid-template-columns: repeat(2, 2fr);
   justify-items: center;
