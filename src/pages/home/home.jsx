@@ -10,6 +10,9 @@ import { useState } from "react";
 import imagem from "./foto.png";
 import comida from "./comidas.png"
 import "./cardapio.css"
+import { Footer } from "antd/es/layout/layout";
+import { Menu } from "antd";
+import Cardapio from "./cardapio";
 
 
 
@@ -17,51 +20,39 @@ import "./cardapio.css"
 
 function Home() {
 
-      const [bebidas, setBebidas] = useState("grid");
+
+
       
-      const [comidas, setComidas] = useState("grid");
-      
-      const [menu, setMenu] = useState("none");
       const [buton, setButon] = useState("flex");
       const [buto, setButo] = useState("none");
+      const [men , setMen] = useState(true);
+      const [cardapio1, setCardapio1] = useState("180vh")
+      
+      const handleClickcardapio1 = () => {
+            
 
-
+      }
 
 
       const handleClickMenu = () => {
             setButon("none")
-            setMenu("flex")
+            setMen(!men);
             setButo("flex")
+            setCardapio1("0vh")
 
       }
       const handleClickMen = () => {
             setButon("flex")
-            setMenu("none")
+            setMen(!men);
             setButo("none")
+            setCardapio1("180vh")
 
       }
 
-      const handleClickComidas = () => {
-            setBebidas("none"), setComidas("grid")
-            // setComidas(!comidas);
-            // setComidass("grid")
-            // setBebidas("none")
-            console.log("ola ")
 
-
-      }
-      const handleClickBebidas = () => {
-            setComidas("none"), setBebidas("grid")
-            // setBebidas(!bebidas);
-            // setBebidass("grid")
-            // setComidass("none")
-            
-            console.log("ola mundo")
-
-      }
       const [showFragment, setShowFragment] = useState(true);
       const handleClick = () => {
-        setShowFragment(!showFragment);
+            setShowFragment(!showFragment);
       };
 
 
@@ -70,12 +61,12 @@ function Home() {
 
 
             <>
-                  
+
                   <div className="App">
-                             
-                              {showFragment && <Nav></Nav>}
-                              <button onClick={handleClick}>Toggle fragment</button>
-                        </div>
+
+                        {showFragment && <Nav></Nav>}
+                        <button onClick={handleClick}>Toggle fragment</button>
+                  </div>
                   <div id="containerHome">
                         <div>
 
@@ -89,38 +80,18 @@ function Home() {
 
                   <main>
 
-                        <button className="butt" onClick={handleClickMen} style={{ display: buto }}>X</button>
-                        <button className="butt" onClick={handleClickMenu} style={{ display: buton }}>CARDAPIO</button>
+                        <button className="butt" onClick={handleClickMen} style={{ display: buto }}>CARDAPIO</button>
+                        <button className="butt" onClick={handleClickMenu} style={{ display: buton }}>X</button>
                   </main>
 
-                  <div id="bttn-op" className="tabs" style={{ display: menu }} >
-                        <button className="butto" onClick={handleClickComidas}  >COMIDAS</button>
-                        <button className="butto" onClick={handleClickBebidas} >BEBIDAS</button>
+                  <div id="cardapio1" style={{height: cardapio1}}>
+                        {
+                              men && <Cardapio></Cardapio>
+                        }
                   </div>
 
-                  <div id="opçoes" style={{ display: menu }}>
-
-
-                        <div style={{display:comidas}} className="grid-menu" > 
-                              <Comidas/>
-                              <Comidas/>
-                              <Comidas/>
-                              <Comidas/>
-                        </div>
-                        
-                        <div style={{display:bebidas}} className="grid-menu">
-                           <Bebidas/>
-                           <Bebidas/>
-                           <Bebidas/>
-                           <Bebidas/>
-                        </div>
-                        
-
-
-                      
-
-
-                  </div>
+ 
+                  
 
 
 
