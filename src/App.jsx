@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { BrowserRouter as Router,  Routes , Route} from 'react-router-dom'
 import Login from './pages/login/login'
-import Home from './pages/home/home'
+import Carda from './pages/home/carda'
 import Adm from './pages/adm/adm'
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <Router>
             <Routes>
               <Route path="/login" element= {<Login/>} />
-              <Route path="/" element= {<Home/>} />
+              <Route path="/" element= {<Carda/>} />
               <Route path="/adm" element= {<Adm/>} />
             
             </Routes>

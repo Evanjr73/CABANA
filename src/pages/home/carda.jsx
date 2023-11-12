@@ -4,7 +4,7 @@ import Comidas from "../../frag/comidas";
 
 import Nav from "../../frag/nav";
 
-import "./home.css"
+import "./carda.css"
 
 import { useState } from "react";
 import imagem from "./foto.png";
@@ -18,34 +18,38 @@ import Cardapio from "./cardapio";
 
 
 
-function Home() {
+function Carda() {
 
 
 
-      
-      const [buton, setButon] = useState("flex");
-      const [buto, setButo] = useState("none");
-      const [men , setMen] = useState(true);
-      const [cardapio1, setCardapio1] = useState("180vh")
-      
+
+      const [buton, setButon] = useState("none"); //CARDAPIO
+      const [buto, setButo] = useState("flex"); //X
+      const [men, setMen] = useState(false);
+      const [cardapio1, setCardapio1] = useState("0vh")
+
       const handleClickcardapio1 = () => {
-            
+
 
       }
 
+   
+      //X
+      const handleClickMen = () => {
+            setButon("flex")
+            
+            setMen(!men);
+            setButo("none")
+            setCardapio1("180vh")
 
+      }
+         //CARDAPIO
       const handleClickMenu = () => {
             setButon("none")
             setMen(!men);
             setButo("flex")
             setCardapio1("0vh")
-
-      }
-      const handleClickMen = () => {
-            setButon("flex")
-            setMen(!men);
-            setButo("none")
-            setCardapio1("180vh")
+            
 
       }
 
@@ -68,30 +72,41 @@ function Home() {
                         {/* <button onClick={handleClick}>Toggle fragment</button> */}
                   </div>
                   <div id="containerHome">
-                      
+
 
                         {/* <input type="file" name="arquivos" class="btn btn-success" /> */}
                         {/* <img src={imagem} id="imghome" /> */}
 
 
-                       
+
 
                   </div>
 
                   <main>
 
                         <button className="butt" onClick={handleClickMen} style={{ display: buto }}>CARDAPIO</button>
-                        <button className="butt" onClick={handleClickMenu} style={{ display: buton }}>X</button>
+                        <button className="butt" onClick={handleClickMenu} style={{ display: buton }}>FECHAR</button>
                   </main>
 
-                  <div id="cardapio1" style={{height: cardapio1}}>
+
+                  <div id="cardapio1" style={{ height: cardapio1 }}>
                         {
                               men && <Cardapio></Cardapio>
                         }
                   </div>
+                  <section>
+                        <div id="cardapio1" style={{ height: "170vh" }}>
+                              <h1>ola mundo</h1>
+                        </div>
+                        <div id="cardapio1" style={{ backgroundColor: "red" }}>
+                              <h1>ola mundo 2</h1>
+                        </div>
 
- 
-                  
+                  </section>
+
+
+
+
 
 
 
@@ -103,4 +118,4 @@ function Home() {
       )
 }
 
-export default Home
+export default Carda

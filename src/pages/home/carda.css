@@ -1,5 +1,6 @@
 nav{
     background-color: rgb(185, 216, 216);
+    
 }
 #containerHome{
     height: 30vh;
@@ -8,6 +9,9 @@ nav{
     background-size: 100%;
     
 
+}
+section{
+ position: absolute;
 }
 #imghome{
 
@@ -83,8 +87,9 @@ li{
 
 
 #cardapio1{
+  position: relative;
   background-color: #4285f4;
-  height: 150vh;
+  
   width: 100vw;
 }
 .clai{
