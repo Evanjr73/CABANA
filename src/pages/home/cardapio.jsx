@@ -3,9 +3,9 @@ import Comidas from "../../frag/comidas";
 import Bebidas from "../../frag/bebidas";
 
 function Cardapio() {
-    const [bebidas, setBebidas] = useState("none");
+    const [bebidas, setBebidas] = useState("grid");
 
-    const [comidas, setComidas] = useState("none");
+    const [comidas, setComidas] = useState("grid");
     const handleClickComidas = () => {
         setBebidas("none"), setComidas("grid")
         // setComidas(!comidas);
