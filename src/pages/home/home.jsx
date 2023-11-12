@@ -68,13 +68,13 @@ function Home() {
                         {/* <button onClick={handleClick}>Toggle fragment</button> */}
                   </div>
                   <div id="containerHome">
-                        <div>
+                      
 
-                              {/* <input type="file" name="arquivos" class="btn btn-success" /> */}
-                              {/* <img src={imagem} id="imghome" /> */}
+                        {/* <input type="file" name="arquivos" class="btn btn-success" /> */}
+                        {/* <img src={imagem} id="imghome" /> */}
 
 
-                        </div>
+                       
 
                   </div>
 

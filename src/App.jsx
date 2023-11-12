@@ -6,7 +6,7 @@ import Home from './pages/home/home'
 import Adm from './pages/adm/adm'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <div className='App'>
