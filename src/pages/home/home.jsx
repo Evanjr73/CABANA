@@ -65,7 +65,7 @@ function Home() {
                   <div className="App">
 
                         {showFragment && <Nav></Nav>}
-                        <button onClick={handleClick}>Toggle fragment</button>
+                        {/* <button onClick={handleClick}>Toggle fragment</button> */}
                   </div>
                   <div id="containerHome">
                         <div>
