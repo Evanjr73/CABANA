@@ -37,11 +37,14 @@ main{
 
 
 ul{
+  
     transition: 1s;
     padding: 0px;
+    margin: auto;
+    background-color: #3c4043;
     margin-top: 25px;
-    margin-right: 20px;
-    display: grid;
+    
+   
     justify-items: center;
     align-items: center;
     gap: 6px;
@@ -60,7 +63,7 @@ li{
     grid-template-columns: repeat(1, 1fr);
     background-color: rgb(218, 216, 216);
     height: 32vh;
-    width: 21vh;
+    width: 20vh;
     padding: 2px;
     border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -77,18 +80,8 @@ li{
     width: 20vh;
     height: 19vh;
 }
-.opcoens{
-    display: flex;
-    transition: 1s;
-}
 
 
-#cantainer{
-
-  height: 175vh;
-  width: 100vw;
-  background-color: red;
-}
 #cardapio1{
   background-color: #4285f4;
   height: 150vh;
@@ -138,32 +131,3 @@ li{
   color: #174ea6;
 }
 
-.button-17:active {
-  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
-  outline: none;
-}
-
-.button-17:focus {
-  outline: none;
-  border: 2px solid #4285f4;
-}
-
-.button-17:not(:disabled) {
-  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-}
-
-.button-17:not(:disabled):hover {
-  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
-}
-
-.button-17:not(:disabled):focus {
-  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-}
-
-.button-17:not(:disabled):active {
-  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
-}
-
-.button-17:disabled {
-  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-}
