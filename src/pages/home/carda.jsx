@@ -42,7 +42,7 @@ function Carda() {
       const handleClickMen = () => {
             setButon("flex")
             setContainerhome("0vh")
-            setFixar("5vh")
+            setFixar("3vh")
             setMen(!men);
             setButo("none")
             setCardapio1("80vh")
