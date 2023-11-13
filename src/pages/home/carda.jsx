@@ -28,6 +28,7 @@ function Carda() {
       const [buto, setButo] = useState("flex"); //X
       const [men, setMen] = useState(false);
       const [cardapio1, setCardapio1] = useState("0vh")
+      const [containerhome ,setContainerhome] = useState("60vh")
 
       const handleClickcardapio1 = () => {
 
@@ -38,7 +39,7 @@ function Carda() {
       //X
       const handleClickMen = () => {
             setButon("flex")
-            
+            setContainerhome("8vh")
             setMen(!men);
             setButo("none")
             setCardapio1("100vh")
@@ -47,6 +48,7 @@ function Carda() {
          //CARDAPIO
       const handleClickMenu = () => {
             setButon("none")
+            setContainerhome("60vh")
             setMen(!men);
             setButo("flex")
             setCardapio1("0vh")
@@ -72,11 +74,11 @@ function Carda() {
                         {showFragment && <Nave></Nave>}
                         {/* <button onClick={handleClick}>Toggle fragment</button> */}
                   </div>
-                  <div id="containerHome">
+                  <div id="containerHome" style={{height: containerhome}}>
 
                         
                         {/* <input type="file" name="arquivos" class="btn btn-success" /> */}
-                        <img src={imagem} id="imghome" />
+                        <img src={imagem} id="imghome" style={{height: containerhome}} />
 
 
 
