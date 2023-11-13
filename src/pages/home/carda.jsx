@@ -28,7 +28,7 @@ function Carda() {
       const [buto, setButo] = useState("flex"); //X
       const [men, setMen] = useState(false);
       const [cardapio1, setCardapio1] = useState("0vh")
-      const [containerhome ,setContainerhome] = useState("70vh")
+      const [containerhome ,setContainerhome] = useState("60vh")
       const [fixar , setFixar] = useState("7vh")
     
 
@@ -41,18 +41,18 @@ function Carda() {
      
       const handleClickMen = () => {
             setButon("flex")
-            setContainerhome("20vh")
-            setFixar("3vh")
+            setContainerhome("0vh")
+            setFixar("5vh")
             setMen(!men);
             setButo("none")
-            setCardapio1("100vh")
+            setCardapio1("80vh")
 
       }
         //X
       const handleClickMenu = () => {
             setButon("none")
             setFixar("7vh")
-            setContainerhome("70vh")
+            setContainerhome("60vh")
             setMen(!men);
             setButo("flex")
             setCardapio1("0vh")
