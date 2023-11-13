@@ -69,11 +69,7 @@ function Carda() {
 
             <>
 
-                  <div className="App">
-
-                        {showFragment && <Nave></Nave>}
-                        {/* <button onClick={handleClick}>Toggle fragment</button> */}
-                  </div>
+                  
                   <div id="containerHome" style={{height: containerhome}}>
 
                         
