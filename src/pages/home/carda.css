@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*{
+  font-family: 'Open Sans', sans-serif;
+}
 nav{
     display: flex;
     flex-direction: row;
     padding: 2px;
-    background-color: rgb(185, 216, 216);
+    background-color: rgba(5, 4, 93, 0.889);
     height: 4vh;
     
 
