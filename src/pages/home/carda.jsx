@@ -49,10 +49,8 @@ function Carda() {
       }
 
 
-      const [showFragment, setShowFragment] = useState(true);
-      const handleClick = () => {
-            setShowFragment(!showFragment);
-      };
+    
+     
 
 
 

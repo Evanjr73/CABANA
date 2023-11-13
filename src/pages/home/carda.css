@@ -25,7 +25,9 @@ nav > button{
   margin-top: 1.3vh;
   margin-left: 23vh;
 }
-
+.paragrafo{
+  height: 50%;
+}
 #containerHome{
     height: 60vh;
     width: 100vw;
@@ -121,7 +123,7 @@ li{
     gap: 0px;
     grid-template-columns: repeat(1, 1fr);
     background-color: rgb(218, 216, 216);
-    height: 32vh;
+    height: auto;
     width: 20vh;
     padding: 2px;
     border-radius: 3px;
