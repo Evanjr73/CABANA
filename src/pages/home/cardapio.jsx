@@ -41,9 +41,25 @@ function Cardapio() {
                     <Comidas />
                     <Comidas />
                     <Comidas />
+                    <Comidas />
+                    <Comidas />
+                    <Comidas />
+                    <Comidas />
+                    <Comidas />
+                    <Comidas />
+                    <Comidas />
+                    <Comidas />
                 </div>
 
                 <div style={{ display: bebidas }} className="grid-menu">
+                    <Bebidas  />
+                    <Bebidas />
+                    <Bebidas />
+                    <Bebidas />
+                    <Bebidas  />
+                    <Bebidas />
+                    <Bebidas />
+                    <Bebidas />
                     <Bebidas  />
                     <Bebidas />
                     <Bebidas />

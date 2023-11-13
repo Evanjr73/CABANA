@@ -4,6 +4,7 @@ import { BrowserRouter as Router,  Routes , Route} from 'react-router-dom'
 import Login from './pages/login/login'
 import Carda from './pages/home/carda'
 import Adm from './pages/adm/adm'
+import Example from './pages/carrosel/carrosel'
 
 function App() {
   
@@ -16,6 +17,7 @@ function App() {
               <Route path="/login" element= {<Login/>} />
               <Route path="/" element= {<Carda/>} />
               <Route path="/adm" element= {<Adm/>} />
+              <Route path="/carrosel" element= {<Example/>} />
             
             </Routes>
         </Router>

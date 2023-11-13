@@ -1,21 +1,54 @@
 nav{
+    display: flex;
+    flex-direction: row;
+    padding: 2px;
     background-color: rgb(185, 216, 216);
+    height: 7vh;
     
+
 }
+nav > h1 {
+  margin-top: 2.5vh;
+  margin-left: 1vh;
+}
+nav > button{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding: 2px;
+  height: 4.5vh;
+  margin-top: 1.3vh;
+  margin-left: 23vh;
+}
+
 #containerHome{
-    height: 30vh;
+    height: 60vh;
+    width: 100vw;
     background-color: aqua;
     background-image:url("logo.png") ;
     background-size: 100%;
-    
 
+   
+}
+#sobrenos{
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#sobrenos > h1{
+  margin: 15px;
+}
+#sobrenos > h3{
+  margin: 15px;
 }
 section{
  position: absolute;
 }
 #imghome{
 
-    height: 60vh;
+    height: 70vh;
     width: 100vw;
 }
 main{
@@ -24,15 +57,32 @@ main{
     text-align: center;
     padding: 15px;
     background-color: white;
-    height: 3vh;
+    height: 7vh;
 }
 #opçoes{
   transition: 1s;
 }
 .butt{
   display: flex;
-  width: auto;
-  min-width: 15vw;
+  height: 7vh;
+  border: solid green 1px;
+  border-radius: 10px;
+  width: 40vw;
+  
+  min-width: 20vw;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+.butt:hover{
+  transition: 0.5s;
+  display: flex;
+  height: 7.4vh;
+  border: solid rgb(21, 255, 21) 3px;
+  border-radius: 10px;
+  width: 41vw;
+  
+  min-width: 20vw;
   align-items: center;
   justify-content: center;
   padding: 15px;
@@ -89,8 +139,10 @@ li{
 #cardapio1{
   position: relative;
   background-color: #4285f4;
-  
+  overflow-y: scroll ;
+  height: 25vh;
   width: 100vw;
+  
 }
 .clai{
   height: 40vh;

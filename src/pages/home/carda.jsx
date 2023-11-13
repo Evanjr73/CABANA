@@ -2,17 +2,18 @@ import React from "react";
 import Bebidas from "../../frag/bebidas";
 import Comidas from "../../frag/comidas";
 
-import Nav from "../../frag/nav";
+import Nave from "../../frag/nav";
 
 import "./carda.css"
 
 import { useState } from "react";
-import imagem from "./foto.png";
+import imagem from "./logo.png";
 import comida from "./comidas.png"
 import "./cardapio.css"
 import { Footer } from "antd/es/layout/layout";
 import { Menu } from "antd";
 import Cardapio from "./cardapio";
+import Example from "../carrosel/carrosel";
 
 
 
@@ -40,7 +41,7 @@ function Carda() {
             
             setMen(!men);
             setButo("none")
-            setCardapio1("180vh")
+            setCardapio1("100vh")
 
       }
          //CARDAPIO
@@ -68,14 +69,14 @@ function Carda() {
 
                   <div className="App">
 
-                        {showFragment && <Nav></Nav>}
+                        {showFragment && <Nave></Nave>}
                         {/* <button onClick={handleClick}>Toggle fragment</button> */}
                   </div>
                   <div id="containerHome">
 
-
+                        
                         {/* <input type="file" name="arquivos" class="btn btn-success" /> */}
-                        {/* <img src={imagem} id="imghome" /> */}
+                        <img src={imagem} id="imghome" />
 
 
 
@@ -94,6 +95,16 @@ function Carda() {
                               men && <Cardapio></Cardapio>
                         }
                   </div>
+                  <div id="sobrenos" >
+                        <h1>SOBRE NÓS</h1>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti facere maxime
+                               sequi natus dolore architecto sit. Nam ipsa consequatur totam, repellat in 
+                               deserunt sint iste enim. Facilis est voluptatem reprehenderit? Lorem, ipsum 
+                               dolor sit amet consectetur adipisicing elit. Ipsam ad iure unde voluptatum 
+                               numquam molestiae beatae ut officia illum dolore nulla soluta pariatur, repre
+                               henderit provident labore quae aut dolorem harum.</h3>
+                  </div>
+
                   <section>
                         <div id="cardapio1" style={{ height: "170vh" }}>
                               <h1>ola mundo</h1>
