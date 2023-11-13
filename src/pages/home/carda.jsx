@@ -28,27 +28,31 @@ function Carda() {
       const [buto, setButo] = useState("flex"); //X
       const [men, setMen] = useState(false);
       const [cardapio1, setCardapio1] = useState("0vh")
-      const [containerhome ,setContainerhome] = useState("60vh")
+      const [containerhome ,setContainerhome] = useState("70vh")
+      const [fixar , setFixar] = useState("7vh")
+    
 
       const handleClickcardapio1 = () => {
 
 
       }
 
-   
-      //X
+        //CARDAPIO
+     
       const handleClickMen = () => {
             setButon("flex")
-            setContainerhome("8vh")
+            setContainerhome("20vh")
+            setFixar("3vh")
             setMen(!men);
             setButo("none")
             setCardapio1("100vh")
 
       }
-         //CARDAPIO
+        //X
       const handleClickMenu = () => {
             setButon("none")
-            setContainerhome("60vh")
+            setFixar("7vh")
+            setContainerhome("70vh")
             setMen(!men);
             setButo("flex")
             setCardapio1("0vh")
@@ -68,7 +72,7 @@ function Carda() {
 
 
             <>
-
+                  <Nave></Nave>
                   
                   <div id="containerHome" style={{height: containerhome}}>
 
@@ -81,10 +85,10 @@ function Carda() {
 
                   </div>
 
-                  <main>
+                  <main style={{height: fixar}}>
 
-                        <button className="butt" onClick={handleClickMen} style={{ display: buto }}>CARDAPIO</button>
-                        <button className="butt" onClick={handleClickMenu} style={{ display: buton }}>FECHAR</button>
+                        <button className="butt" onClick={handleClickMen} style={{ display: buto , height: fixar}} >CARDAPIO</button>
+                        <button className="butt" onClick={handleClickMenu} style={{ display: buton , height: fixar}}>FECHAR</button>
                   </main>
 
 
