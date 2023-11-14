@@ -7,10 +7,11 @@ import { useState } from "react";
 function Comidas() {
 
     const [listaheig, setListaheig] = useState('0vh')
+    const [wi, setWi] = useState("20vh")
     const [pe, setPe] = useState(false)
 
     const handleClickparagraf = () => {
-
+        
         setListaheig("20vh")
         setPe(!pe)
 

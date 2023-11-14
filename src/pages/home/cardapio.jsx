@@ -28,8 +28,8 @@ function Cardapio() {
     return (
         <>
             <div id="bttn-op" className="tabs" style={{ display: "flex" }} >
-                <button className="butto" onClick={handleClickComidas}  >COMIDAS</button>
-                <button className="butto" onClick={handleClickBebidas} >BEBIDAS</button>
+                <button className="butto" onClick={handleClickComidas} style={{borderRadius:"10px"}} >COMIDAS</button>
+                <button className="butto" onClick={handleClickBebidas} style={{borderRadius:"10px"}} >BEBIDAS</button>
             </div>
 
             <div id="opçoes">
