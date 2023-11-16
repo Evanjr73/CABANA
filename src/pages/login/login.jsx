@@ -15,7 +15,7 @@ function Login() {
     if (password.length < 8) {
       setError("Password must be at least 8 characters long.");
     } else if (password === "12345678" && username === "evsioljr@gmail.com") {
-      history('/home');
+      history('/adm');
     } else {
       alert("ERRO NO LOGIN")
       setError("email ou senha incorretos"); // Exibe mensagem de erro

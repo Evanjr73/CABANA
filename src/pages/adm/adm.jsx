@@ -27,7 +27,7 @@ function Adm() {
     <div>
 
 
-      <nav> RESTAURANTE</nav>
+      <a href="./"><nav> RESTAURANTE</nav></a>
 
       <div id='containeradm' style={{ height: "70vh", width: "100vw", paddingTop: "5vh" }}>
         <div id='containeradm-2' style={{ height: "63vh", width: "80vw", margin: "auto", borderRadius: "0.5rem", padding: "1rem" }}>
