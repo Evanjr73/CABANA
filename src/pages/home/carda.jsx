@@ -57,8 +57,11 @@ function Carda() {
       return (
 
 
-            <>
-
+            <>    
+                  
+                  <header style={{width:"100vw", height:"4vh"}}>
+                        <a href="/login"> <button className="BUTT" style={{width:"20vw", margin:"0.4rem"}}>ADM</button></a>
+                  </header>
                   <nav style={{display: buton}} >
                         <h1>RESTAURANTE</h1>
 
