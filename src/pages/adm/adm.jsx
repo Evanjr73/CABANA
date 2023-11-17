@@ -5,10 +5,9 @@ import './adm.css';
 import Cardapio from '../home/cardapio';
 
 
-
 function Adm() {
   const [selectedImage, setSelectedImage] = useState(null);
-
+  const history = useNavigate('/')
   const handleImageChange = (e) => {
     const file = e.target.files[0];
 
@@ -21,13 +20,20 @@ function Adm() {
 
       reader.readAsDataURL(file);
     }
-  };
+  
+
+
+}
+const handleClickhome = () => {
+  history('/')
+
+}
 
   return (
     <div>
 
 
-      <a href="./carda"><nav> RESTAURANTE</nav></a>
+     <nav onClick={handleClickhome}> RESTAURANTE</nav>
 
       <div id='containeradm' style={{ height: "70vh", width: "100vw", paddingTop: "5vh" }}>
         <div id='containeradm-2' style={{ height: "63vh", width: "80vw", margin: "auto", borderRadius: "0.5rem", padding: "1rem" }}>

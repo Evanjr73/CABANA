@@ -14,8 +14,8 @@ function App() {
       
         <Router>
             <Routes>
-              <Route path="/" element= {<Login/>} />
-              <Route path="/carda" element= {<Carda/>} />
+              <Route path="/login" element= {<Login/>} />
+              <Route path="/" element= {<Carda/>} />
               <Route path="/adm" element= {<Adm/>} />
               <Route path="/carrosel" element= {<Example/>} />
             

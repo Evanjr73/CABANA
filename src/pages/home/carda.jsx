@@ -4,7 +4,7 @@ import { useState } from "react";
 import imagem from "./logo.png";
 import "./cardapio.css"
 import Cardapio from "./cardapio";
-
+import { useNavigate } from 'react-router-dom';
 
 
 function Carda() {
@@ -18,10 +18,10 @@ function Carda() {
       const [cardapio1, setCardapio1] = useState("0vh")
       const [containerhome, setContainerhome] = useState("60vh")
       const [fixar, setFixar] = useState("7vh")
+      const history = useNavigate();
 
-
-      const handleClickcardapio1 = () => {
-
+      const handleClickadm = () => {
+            history('/login')
 
       }
 
@@ -60,7 +60,7 @@ function Carda() {
             <>    
                   
                   <header style={{width:"100vw", height:"4vh"}}>
-                        <a href="./"> <button className="BUTT" style={{width:"20vw", margin:"0.4rem"}}>ADM</button></a>
+                        <button className="BUTT" style={{width:"20vw", margin:"0.4rem"}} onClick={handleClickadm}>ADM</button>
                   </header>
                   <nav style={{display: buton}} >
                         <h1>RESTAURANTE</h1>
