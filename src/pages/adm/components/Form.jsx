@@ -72,31 +72,34 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
     if (onEdit) {
       await axios
         .put("http://localhost:8800/" + onEdit.id, {
-          nome: user.nomel.value,
-          email: user.valor.value,
-          fone: user.sobre.value, 
-          fone: user.imagem.value,
-          fone: user.pessoas.value,     
+          nomel: user.nomel.value,
+          valor: user.valor.value,
+          sobre: user.sobre.value, 
+          imagem: user.imagem.value,
+          pessoas: user.pessoas.value,     
          
         })
         .then(({ data }) => toast.success(data))   
         .catch(({ data }) => toast.error(data));
+        console.log("if")
     } else {
       await axios
-        .post("http://localhost:8800", {
-          nome: user.nomel.value,
-          email: user.valor.value,
-          fone: user.sobre.value,
-          fone: user.imagem.value,
-          fone: user.pessoas.value,
+        .post("http://localhost:8800/", {
+          nomel: user.nomel.value,
+          valor: user.valor.value,
+          sobre: user.sobre.value,
+          imagem: user.imagem.value,
+          pessoas: user.pessoas.value,
           
         }) 
         .then(({ data }) => toast.success(data))
         .catch(({ data }) => toast.error(data));
+        console.log("else")
     }
 
     user.nomel.value = "";
     user.valor.value = "";
+    console.log("fora")
     
     user.sobre.value = "";
     user.imagem.value = "";
@@ -107,7 +110,7 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
   };
 
   return (
-    <FormContainer ref={ref} >
+    <FormContainer ref={ref} onSubmit={handleSubmit}>
       <InputArea>
         <Label>Nome</Label>
         <Input name="nomel" />
@@ -129,7 +132,7 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
         <Input name="pessoas"  />
       </InputArea>
 
-      <Button  onClick={handleSubmit}>SALVAR</Button>
+      <Button type="submit">SALVAR</Button>
     </FormContainer>
   );
 };

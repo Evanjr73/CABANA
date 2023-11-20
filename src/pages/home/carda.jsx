@@ -3,8 +3,18 @@ import "./carda.css"
 import { useState } from "react";
 import imagem from "./logo.png";
 import "./cardapio.css"
-import Cardapio from "./cardapio";
+// import Cardapio from "./cardapio";
 import { useNavigate } from 'react-router-dom';
+///////// banco de dados///////////
+
+import Grid from "../adm/components/Grid";
+import { useEffect } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
+
+
+
 
 
 function Carda() {
@@ -19,6 +29,24 @@ function Carda() {
       const [containerhome, setContainerhome] = useState("60vh")
       const [fixar, setFixar] = useState("7vh")
       const history = useNavigate();
+
+      ////////////bamco de dados/////////
+      const [users, setUsers] = useState([]);
+      const [onEdit, setOnEdit] = useState(null);
+
+      const getUsers = async () => {
+            try {
+              const res = await axios.get("http://localhost:8800");
+              setUsers(res.data.sort((a, b) => (a.nomel > b.nomel ? 1 : -1)));
+            } catch (error) {
+              toast.error(error);
+            }
+          };
+        
+          useEffect(() => {
+            getUsers();
+          }, [setUsers]);
+      ////////////////////////////////////
 
       const handleClickadm = () => {
             history('/login')
@@ -88,9 +116,15 @@ function Carda() {
 
 
                   <div id="cardapio1" style={{ height: cardapio1 }}>
-                        {
+                        {/* {
                               men && <Cardapio></Cardapio>
-                        }
+                        } */}
+                        { men && <Grid setOnEdit={setOnEdit} users={users} setUsers={setUsers}  /> }
+
+                        
+                        <ToastContainer autoClose={3000} position={toast.POSITION.BOTTOM_LEFT} />
+
+
                   </div>
                   <div id="sobrenos" >
                         <h1>SOBRE NÓS</h1>

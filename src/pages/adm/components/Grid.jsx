@@ -26,9 +26,7 @@ export const Th = styled.th`
   border-bottom: inset;
   padding-bottom: 5px;
 
-  @media (max-width: 500px) {
-    ${(props) => props.onlyWeb && "display: none"}
-  }
+ 
 `;
 
 export const Td = styled.td`
@@ -65,8 +63,8 @@ const Grid = ({ users, setUsers, setOnEdit }) => {
       <Thead>
         <Tr>
           <Th>Nome</Th>
-          <Th>Email</Th>
-          <Th onlyWeb>Fone</Th>
+          <Th>valor</Th>
+          <Th onlyWeb>sobre</Th>
           <Th></Th>
           <Th></Th>
         </Tr>
@@ -76,7 +74,7 @@ const Grid = ({ users, setUsers, setOnEdit }) => {
           <Tr key={i}>
             <Td width="30%">{item.nomel}</Td>
             <Td width="30%">{item.valor}</Td>
-            <Td width="20%" onlyWeb>
+            <Td width="20%" >
               {item.sobre}
             </Td>
             <Td alignCenter width="5%">
