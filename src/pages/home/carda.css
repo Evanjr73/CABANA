@@ -68,6 +68,8 @@ main{
 }
 #opçoes{
   transition: 1s;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
 }
 .butt{
   display: flex;
@@ -98,10 +100,10 @@ main{
 
 
 ul{
-  
+    display: grid;
     transition: 1s;
     padding: 0px;
-    margin: auto;
+    margin-left: 1.5vh;
     background-color: #3c4043;
     margin-top: 25px;
     
@@ -109,7 +111,7 @@ ul{
     justify-items: center;
     align-items: center;
     gap: 6px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 2fr);
     
 
 }
@@ -126,6 +128,7 @@ li{
     height: auto;
     width: 20vh;
     padding: 2px;
+    margin-top: 10px;
     border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -144,6 +147,7 @@ li{
 
 
 #cardapio1{
+
   position: relative;
   background-color: #4285f4;
   overflow-y: scroll ;

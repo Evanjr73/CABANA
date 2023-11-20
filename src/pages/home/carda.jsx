@@ -3,11 +3,11 @@ import "./carda.css"
 import { useState } from "react";
 import imagem from "./logo.png";
 import "./cardapio.css"
-// import Cardapio from "./cardapio";
+import Cardapio from "./cardapio";
 import { useNavigate } from 'react-router-dom';
 ///////// banco de dados///////////
 
-import Grid from "../adm/components/Grid";
+import Gridmenu from "../adm/components/Gridmenu";
 import { useEffect } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -116,13 +116,13 @@ function Carda() {
 
 
                   <div id="cardapio1" style={{ height: cardapio1 }}>
-                        {/* {
+                        {
                               men && <Cardapio></Cardapio>
-                        } */}
-                        { men && <Grid setOnEdit={setOnEdit} users={users} setUsers={setUsers}  /> }
+                        }
+                        {/* { men && <Gridmenu setOnEdit={setOnEdit} users={users} setUsers={setUsers}  /> }
 
                         
-                        <ToastContainer autoClose={3000} position={toast.POSITION.BOTTOM_LEFT} />
+                        <ToastContainer autoClose={3000} position={toast.POSITION.BOTTOM_LEFT} /> */}
 
 
                   </div>

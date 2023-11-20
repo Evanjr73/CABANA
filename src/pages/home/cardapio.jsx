@@ -1,6 +1,19 @@
 import { useState } from "react";
-import Comidas from "../../frag/comidas";
-import Bebidas from "../../frag/bebidas";
+// import Comidas from "../../frag/comidas";
+// import Bebidas from "../../frag/bebidas";
+import Gridmenu from "../adm/components/Gridmenu";
+import Gridbebidas from "../adm/components/Gridbebidas";
+
+//bando de dado///
+
+
+
+
+import { useEffect } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
+/////////////////////////////////////////
 
 function Cardapio() {
     const [bebidas, setBebidas] = useState("grid");
@@ -25,6 +38,26 @@ function Cardapio() {
 
   }
 
+
+  
+  const [users, setUsers] = useState([]);
+  const [onEdit, setOnEdit] = useState(null);
+
+  const getUsers = async () => {
+    try {
+      const res = await axios.get("http://localhost:8800");
+      setUsers(res.data.sort((a, b) => (a.nomel > b.nomel ? 1 : -1)));
+    } catch (error) {
+      toast.error(error);
+    }
+  };
+
+  useEffect(() => {
+    getUsers();
+  }, [setUsers]);
+
+  ////////////////
+
     return (
         <>
             <div id="bttn-op" className="tabs" style={{ display: "flex" }} >
@@ -37,34 +70,10 @@ function Cardapio() {
 
 
                 <div style={{ display: comidas }} className="grid-menu" >
-                    <Comidas />
-                    <Comidas />
-                    <Comidas />
-                    <Comidas />
-                    <Comidas />
-                    <Comidas />
-                    <Comidas />
-                    <Comidas />
-                    <Comidas />
-                    <Comidas />
-                    <Comidas />
-                    <Comidas />
+                    <Gridmenu setOnEdit={setOnEdit} users={users} setUsers={setUsers}></Gridmenu>
                 </div>
 
-                <div style={{ display: bebidas }} className="grid-menu">
-                    <Bebidas  />
-                    <Bebidas />
-                    <Bebidas />
-                    <Bebidas />
-                    <Bebidas  />
-                    <Bebidas />
-                    <Bebidas />
-                    <Bebidas />
-                    <Bebidas  />
-                    <Bebidas />
-                    <Bebidas />
-                    <Bebidas />
-                </div>
+               
 
 
 
