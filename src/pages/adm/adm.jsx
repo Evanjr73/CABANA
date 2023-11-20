@@ -7,6 +7,7 @@ import Cardapio from '../home/cardapio';
 
 function Adm() {
   const [selectedImage, setSelectedImage] = useState(null);
+  
   const history = useNavigate('/')
   const handleImageChange = (e) => {
     const file = e.target.files[0];
