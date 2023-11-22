@@ -104,7 +104,7 @@ ul{
     transition: 1s;
     padding: 0px;
     margin-left: 1.5vh;
-    background-color: #3c4043;
+    
     margin-top: 25px;
     
    
@@ -129,7 +129,7 @@ li{
     width: 20vh;
     padding: 2px;
     margin-top: 10px;
-    border-radius: 3px;
+    border-radius: 14px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .grid-menu{

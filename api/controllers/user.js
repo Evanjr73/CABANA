@@ -10,6 +10,7 @@ export const getUsers = (_, res) => {
   });
 };
 
+
 export const addUser = (req, res) => {
   const q =
     "INSERT INTO menu(`nomel`, `valor`, `sobre`, `imagem`, `pessoas`) VALUES(?)";

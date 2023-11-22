@@ -1,14 +1,15 @@
+
 import express from "express";
-import { addUser, deleteUser, getUsers, updateUser } from "../controllers/beb.js";
 
+import { addBebidas, deleteBebidas, getBebidas, updateBebidas } from "../controllers/beb.js";
 const router = express.Router()
+router.get("/", getBebidas )
 
-router.get("/", getUsers)
+router.post("/", addBebidas)
 
-router.post("/", addUser)
+router.put("/:id", updateBebidas)
 
-router.put("/:id", updateUser)
+router.delete("/:id", deleteBebidas)
 
-router.delete("/:id", deleteUser)
 
 export default router

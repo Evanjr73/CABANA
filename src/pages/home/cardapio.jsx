@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useEffect } from "react";
 // import Comidas from "../../frag/comidas";
 // import Bebidas from "../../frag/bebidas";
 import Gridmenu from "../adm/components/Gridmenu";
@@ -9,7 +10,7 @@ import Gridbebidas from "../adm/components/Gridbebidas";
 
 
 
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
@@ -41,21 +42,31 @@ function Cardapio() {
 
   
   const [users, setUsers] = useState([]);
+  const [user , setUser] = useState([])
   const [onEdit, setOnEdit] = useState(null);
 
   const getUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:8800");
+      const res = await axios.get("http://localhost:8800/");
       setUsers(res.data.sort((a, b) => (a.nomel > b.nomel ? 1 : -1)));
     } catch (error) {
       toast.error(error);
     }
   };
+  const getBebidas = async () => {
+    try {
+      const res = await axios.get("http://localhost:8800/bebidas");
+      setUser(res.data.sort((a, b) => (a.nomel > b.nomel ? 1 : -1)));
+    } catch (error) {
+      toast.error(error);
+    }
+  };
+
 
   useEffect(() => {
-    getUsers();
-  }, [setUsers]);
-
+    getUsers(), getBebidas();
+  }, [setUsers, setUser]);
+ 
   ////////////////
 
     return (
@@ -69,9 +80,19 @@ function Cardapio() {
 
 
 
-                <div style={{ display: comidas }} className="grid-menu" >
+            <div style={{ display: comidas }} className="grid-menu" >
                     <Gridmenu setOnEdit={setOnEdit} users={users} setUsers={setUsers}></Gridmenu>
+                   
                 </div>
+
+                <div style={{ display: bebidas }} className="grid-menu" >
+                    <Gridbebidas  users={user} setUsers={setUser}></Gridbebidas>
+                   
+                </div>
+
+                {/* <div style={{ display: comidas }} className="grid-menu" >
+                    <Gridbebidas setOnEdit={setOnEdit} user={user} setUser={setUser}></Gridbebidas>
+                </div> */}
 
                
 

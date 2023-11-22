@@ -47,7 +47,7 @@ const Gridbebidas = ({ users, setUsers, setOnEdit }) => {
 
     const handleDelete = async (id) => {
         await axios
-            .delete("http://localhost:8800/" + id)
+            .delete("http://localhost:8800/bebidas" + id)
             .then(({ data }) => {
                 const newArray = users.filter((user) => user.id !== id);
 
@@ -83,7 +83,7 @@ const Gridbebidas = ({ users, setUsers, setOnEdit }) => {
 
                     <li id="" className="listadecomidas"  >
                         <p style={{ height: "25px" }} >{item.nomel} </p>
-                        <img src={comida} className="imagensdocardapio" alt="" />
+                        {/* <img src={comida} className="imagensdocardapio" alt="" /> */}
 
                         <p style={{ height: "20px" }}>{item.valor}</p>
                         <div className="paragrafo" style={{ padding: "10px" }} >

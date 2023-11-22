@@ -138,10 +138,10 @@ function Carda() {
 
                   <section>
                         <div id="cardapio1" style={{ height: "170vh" }}>
-                              <h1>ola mundo</h1>
+                              <h1></h1>
                         </div>
                         <div id="cardapio1" style={{ backgroundColor: "red" }}>
-                              <h1>ola mundo 2</h1>
+                              <h1></h1>
                         </div>
 
                   </section>

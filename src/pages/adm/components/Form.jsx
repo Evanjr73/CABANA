@@ -39,8 +39,24 @@ const Button = styled.button`
   height: 42px;
 `;
 
-const Form = ({ getUsers, onEdit, setOnEdit }) => {
+const Form = ({ getUsers, onEdit, setOnEdit,  getUser, onEdi, setOnEdi  }) => {
   const ref = useRef();
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+
+    if (file) {
+      const reader = new FileReader();
+
+      reader.onloadend = () => {
+        setSelectedImage(reader.result);
+      };
+
+      reader.readAsDataURL(file);
+    }
+
+
+
+  }
 
   useEffect(() => {
     if (onEdit) {
@@ -54,20 +70,21 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
     }
   }, [onEdit]);
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const user = ref.current;
 
-    // if (
-    //   !user.nomel.value ||
-    //   !user.valor.value ||
-    //   !user.sobre.value ||
-    //   !user.imagem.value ||
-    //   !user.pessoas.value
-    // ) {
-    //   return toast.warn("Preencha todos os campos!");
-    // }
+    if (
+      !user.nomel.value ||
+      !user.valor.value ||
+      !user.sobre.value ||
+      !user.imagem.value ||
+      !user.pessoas.value
+    ) {
+      return toast.warn("Preencha todos os campos!");
+    }
 
     if (onEdit) {
       await axios
@@ -88,7 +105,7 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
           nomel: user.nomel.value,
           valor: user.valor.value,
           sobre: user.sobre.value,
-          imagem: user.imagem.value,
+          // imagem: user.imagem.value,
           pessoas: user.pessoas.value,
           
         }) 
@@ -96,6 +113,8 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
         .catch(({ data }) => toast.error(data));
         console.log("else")
     }
+    
+
 
     user.nomel.value = "";
     user.valor.value = "";
@@ -125,7 +144,8 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
       </InputArea>
       <InputArea>
         <Label>imagem</Label>
-        <Input name="imagem"/>
+        
+        <Input name="imagem" />
       </InputArea>
       <InputArea>
         <Label>pessoas</Label>
