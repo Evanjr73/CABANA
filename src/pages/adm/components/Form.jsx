@@ -39,7 +39,7 @@ const Button = styled.button`
   height: 42px;
 `;
 
-const Form = ({ getUsers, onEdit, setOnEdit,  getUser, onEdi, setOnEdi  }) => {
+const Form = ({ getUsers, onEdit, setOnEdit}) => {
   const ref = useRef();
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -105,7 +105,7 @@ const Form = ({ getUsers, onEdit, setOnEdit,  getUser, onEdi, setOnEdi  }) => {
           nomel: user.nomel.value,
           valor: user.valor.value,
           sobre: user.sobre.value,
-          // imagem: user.imagem.value,
+          imagem: user.imagem.value,
           pessoas: user.pessoas.value,
           
         }) 

@@ -39,14 +39,14 @@ export const Td = styled.td`
   }
 `;
 
-const Grid = ({ users, setUsers, setOnEdit }) => {
+const Gridy = ({ users, setUsers, setOnEdit }) => {
   const handleEdit = (item) => {
     setOnEdit(item);
   };
 
   const handleDelete = async (id) => {
     await axios
-      .delete("http://localhost:8800/" + id )
+      .delete("http://localhost:8800/bebidas" + id )
       .then(({ data }) => {
         const newArray = users.filter((user) => user.id !== id);
 
@@ -90,4 +90,4 @@ const Grid = ({ users, setUsers, setOnEdit }) => {
   );
 };
 
-export default Grid;
+export default Gridy;

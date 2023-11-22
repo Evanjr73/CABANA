@@ -16,7 +16,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import Gridbebidas from './components/Gridbebidas.jsx';
-
+import Gridy from './components/Gridy.jsx'
 const Container = styled.div`
   width: 100%;
   max-width: 800px;
@@ -43,40 +43,58 @@ function Adm() {
   // banco de dados comidas//
 
   const [users, setUsers] = useState([]);
+ 
   const [onEdit, setOnEdit] = useState(null);
+  const [user, setUser] = useState([]);
+ 
+  const [onEdi, setOnEdi] = useState(null);
 
   const getUsers = async () => {
     try {
       const res = await axios.get("http://localhost:8800/");
       setUsers(res.data.sort((a, b) => (a.nomel > b.nomel ? 1 : -1)));
+      
+       
+      
+      
     } catch (error) {
       toast.error(error);
     }
+
+  };
+  const getBebidas= async () => {
+    try {
+      const res = await axios.get("http://localhost:8800/bebidas");
+      setUser(res.data.sort((a, b) => (a.nomel > b.nomel ? 1 : -1)));
+      
+      
+    } catch (error) {
+      toast.error(error);
+    }
+
+  
   };
 
-  useEffect(() => {
-    getUsers();
-  }, [setUsers]);
+  useEffect(()=> {
+    getBebidas() ;
+  }, [setUser])
 
+  useEffect(()=> {
+    getUsers() ;
+  }, [setUsers])
+
+
+ 
+
+
+ 
   ////////////////
 
     // banco de dados bebidas//
 
-    const [user, setUser] = useState([]);
-    const [onEdi, setOnEdi] = useState(null);
+
   
-    const getUser = async () => {
-      try {
-        const res = await axios.get("http://localhost:8800/bebidas");
-        setUser(res.data.sort((a, b) => (a.nomel > b.nomel ? 1 : -1)));
-      } catch (error) {
-        toast.error(error);
-      }
-    };
-  
-    useEffect(() => {
-      getUser();
-    }, [setUser]);
+
   
     ////////////////
 
@@ -93,7 +111,7 @@ function Adm() {
 
           <Container>
             <Title>USUÁRIOS</Title>
-            <Form onEdit={onEdit} setOnEdit={setOnEdit} getUsers={getUsers} />
+            <Form onEdit={onEdit} setOnEdit={setOnEdit} getUsers={getUsers}   />
            
           </Container>
           <ToastContainer autoClose={3000} position={toast.POSITION.BOTTOM_LEFT} />
@@ -106,6 +124,9 @@ function Adm() {
       </div>
       <div id='container-btn-adm' style={{ marginTop: "3vh" }}>
         <Grid setOnEdit={setOnEdit} users={users} setUsers={setUsers} />
+        <Grid setOnEdit={setOnEdit} users={user} setUser={setUser} />
+        {/* <Gridy setOnEdi={setOnEdi} user={user} setUser={setUser} /> */}
+    
         {/* <Cardapio></Cardapio> */}
 
       </div>
