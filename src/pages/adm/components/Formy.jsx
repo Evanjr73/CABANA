@@ -39,7 +39,7 @@ const Button = styled.button`
   height: 42px;
 `;
 
-const Form = ({ getUsers, onEdit, setonEdit, }) => {
+const Formy = ({ getUsers, onEdit, setOnEdit, }) => {
   const ref = useRef();
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -88,7 +88,7 @@ const Form = ({ getUsers, onEdit, setonEdit, }) => {
 
     if (onEdit) {
       await axios
-        .put("http://localhost:8800/" + onEdit.id, {
+        .put("http://localhost:8800/bebidas" + onEdit.id, {
           nomel: user.nomel.value,
           valor: user.valor.value,
           sobre: user.sobre.value, 
@@ -101,7 +101,7 @@ const Form = ({ getUsers, onEdit, setonEdit, }) => {
         console.log("if")
     } else {
       await axios
-        .post("http://localhost:8800/", {
+        .post("http://localhost:8800/bebidas", {
           nomel: user.nomel.value,
           valor: user.valor.value,
           sobre: user.sobre.value,
@@ -124,7 +124,7 @@ const Form = ({ getUsers, onEdit, setonEdit, }) => {
     user.imagem.value = "";
     user.pessoas.value = "";
 
-    setonEdit(null);
+    setOnEdit(null);
     getUsers();
   };
 
@@ -157,4 +157,4 @@ const Form = ({ getUsers, onEdit, setonEdit, }) => {
   );
 };
 
-export default Form;
+export default Formy;
