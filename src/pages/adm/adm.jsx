@@ -15,8 +15,10 @@ import { useEffect } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-import Gridbebidas from './components/Gridbebidas.jsx';
+// import Gridbebidas from './components/Gridbebidas.jsx';
 import Gridy from './components/Gridy.jsx'
+import Admmy from './admy.jsx';
+import Admm from './admm.jsx';
 const Container = styled.div`
   width: 100%;
   max-width: 800px;
@@ -31,9 +33,9 @@ const Title = styled.h2``;
 
 
 function Adm() {
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [conatinerbebida, setConatinerbebida] = useState(false)
-  const [containercomidas, setContainercomidas] = useState(true)
+  // const [selectedImage, setSelectedImage] = useState(null);
+  const [containerbebida, setContainerbebida] = useState("none")
+  const [containercomidas, setContainercomidas] = useState("flex")
   const history = useNavigate('/')
 
   const handleClickhome = () => {
@@ -85,13 +87,13 @@ function Adm() {
   }, [setUsers])
 
 
-  const handleClickconatinerbebida = () => {
-    setConatinerbebida(!conatinerbebida)
-    setContainercomidas(!true)
+  const handleClickcontainerbebida = () => {
+    setContainerbebida("flex")
+    setContainercomidas("none")
   }
   const handleClickconatinercomida = () => {
-    setConatinerbebida(!conatinerbebida)
-    setContainercomidas(true)
+    setContainerbebida("none")
+    setContainercomidas("flex")
   }
 
 
@@ -115,37 +117,35 @@ function Adm() {
         <div id='containeradm-2' style={{ height: "60vh", width: "80vw", margin: "auto", borderRadius: "0.5rem", padding: "1rem" }}>
           <h1 style={{ display: "flex", marginLeft: "28vw" }}>ADICIONAR</h1>
           <div style={{ display: "flex", width: "100%", height: "8vh", justifyContent: "center", backgroundColor: "green" }}>
-            <button style={{ margin: "1vw", borderRadius: "5px", width: "30vw" }} onClick={handleClickconatinerbebida}>BEBIDAS</button>
+            <button style={{ margin: "1vw", borderRadius: "5px", width: "30vw" }} onClick={handleClickcontainerbebida}>BEBIDAS</button>
             <button style={{ margin: "1vw", borderRadius: "5px", width: "30vw" }} onClick={handleClickconatinercomida}>COMIDAS</button>
           </div>
 
-          {
-            conatinerbebida && <Container>
-              <Title>BEBIDAS</Title>
-              <Formy onEdit={onEdit} setOnEdit={setOnEdit} getUsers={getBebidas} />
+          {/* {
+             containercomidas && <Admm></Admm>
 
-            </Container>
           }
 
           {
-            containercomidas && <Container>
-              <Title>COMIDAS</Title>
-              <Form onEdi={onEdit} setOnEdi={setOnEdit} getUsers={getUsers} />
-
-            </Container>
-          }
-
-          <ToastContainer autoClose={3000} position={toast.POSITION.BOTTOM_LEFT} />
-          <GlobalStyle />
+           conatinerbebida && <Admmy></Admmy>
+          } */}
+          <div style={{display:containercomidas}}>
+                 <Admm ></Admm>
+          </div>
+          <div style={{display: containerbebida}}>
+                 <Admmy ></Admmy>
+          </div>
+        
 
 
 
 
         </div>
+        <ToastContainer autoClose={3000} position={toast.POSITION.BOTTOM_LEFT} />
+       
       </div>
       <div id='container-btn-adm' style={{ marginTop: "10vh" }}>
-        <Grid setOnEdit={setOnEdit} users={users} setUsers={setUsers} />
-        <Gridy setOnEdit={setOnEdit} users={user} setUsers={setUser} />
+
         {/* <Gridy setOnEdi={setOnEdi} user={user} setUser={setUser} /> */}
 
         {/* <Cardapio></Cardapio> */}

@@ -39,24 +39,8 @@ const Button = styled.button`
   height: 42px;
 `;
 
-const Formy = ({ getUsers, onEdit, setOnEdit, }) => {
+const Formy = ({ getUsers, onEdit, setOnEdit }) => {
   const ref = useRef();
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-
-    if (file) {
-      const reader = new FileReader();
-
-      reader.onloadend = () => {
-        setSelectedImage(reader.result);
-      };
-
-      reader.readAsDataURL(file);
-    }
-
-
-
-  }
 
   useEffect(() => {
     if (onEdit) {
@@ -88,7 +72,7 @@ const Formy = ({ getUsers, onEdit, setOnEdit, }) => {
 
     if (onEdit) {
       await axios
-        .put("http://localhost:8800/bebidas" + onEdit.id, {
+        .put("http://localhost:8800/bebidas/" + onEdit.id, {
           nomel: user.nomel.value,
           valor: user.valor.value,
           sobre: user.sobre.value, 

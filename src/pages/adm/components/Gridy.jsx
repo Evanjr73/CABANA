@@ -46,7 +46,7 @@ const Gridy = ({ users, setUsers, setOnEdit }) => {
 
   const handleDelete = async (id) => {
     await axios
-      .delete("http://localhost:8800/bebidas" + id )
+      .delete("http://localhost:8800/bebidas/" + id )
       .then(({ data }) => {
         const newArray = users.filter((user) => user.id !== id);
 

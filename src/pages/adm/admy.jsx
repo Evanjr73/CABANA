@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './adm.css';
 import GlobalStyle from "./styles/global.js";
+import Formy from "./components/Formy.jsx"
 import styled from "styled-components";
 import Form from "./components/Form.jsx";
 import Grid from "./components/Grid.jsx";
@@ -23,7 +24,7 @@ const Container = styled.div`
 const Title = styled.h2``;
 
 
-function Admm() {
+function Admmy() {
 
 
 
@@ -35,7 +36,7 @@ function Admm() {
 
     const getUsers = async () => {
         try {
-            const res = await axios.get("http://localhost:8800/");
+            const res = await axios.get("http://localhost:8800/bebidas");
             setUsers(res.data.sort((a, b) => (a.nomel > b.nomel ? 1 : -1)));
 
         } catch (error) {
@@ -54,8 +55,8 @@ function Admm() {
 
 
             <Container>
-                <Title>COMIDAS</Title>
-                <Form onEdit={onEdit} setOnEdit={setOnEdit} getUsers={getUsers} />
+                <Title>BEBIDAS</Title>
+                <Formy onEdit={onEdit} setOnEdit={setOnEdit} getUsers={getUsers} />
 
             </Container>
 
@@ -79,5 +80,4 @@ function Admm() {
     )
 }
 
-export default Admm;
-
+export default Admmy;
