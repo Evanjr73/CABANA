@@ -113,7 +113,7 @@ const Formy = ({ getUsers, onEdit, setOnEdit }) => {
   };
 
   return (
-    <FormContainer ref={ref} onSubmit={handleSubmit}>
+    <FormContainer ref={ref} onSubmit={handleSubmit} >
       <InputArea>
         <Label>Nome</Label>
         <Input name="nomel" />

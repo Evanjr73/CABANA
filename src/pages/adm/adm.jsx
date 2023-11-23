@@ -114,7 +114,7 @@ function Adm() {
       <nav onClick={handleClickhome} > <h1>RESTAURANTE</h1></nav>
 
       <div id='containeradm' style={{ height: "40vh", width: "100vw", paddingTop: "1vh" }}>
-        <div id='containeradm-2' style={{ height: "60vh", width: "80vw", margin: "auto", borderRadius: "0.5rem", padding: "1rem" }}>
+        <div id='containeradm-2' style={{ height: "60vh", width: "90vw", margin: "auto", borderRadius: "0.5rem", padding: "1rem" }}>
           <h1 style={{ display: "flex", marginLeft: "28vw" }}>ADICIONAR</h1>
           <div style={{ display: "flex", width: "100%", height: "8vh", justifyContent: "center", backgroundColor: "green" }}>
             <button style={{ margin: "1vw", borderRadius: "5px", width: "30vw" }} onClick={handleClickcontainerbebida}>BEBIDAS</button>
@@ -129,20 +129,20 @@ function Adm() {
           {
            conatinerbebida && <Admmy></Admmy>
           } */}
-          <div style={{display:containercomidas}}>
-                 <Admm ></Admm>
+          <div style={{ display: containercomidas }}>
+            <Admm ></Admm>
           </div>
-          <div style={{display: containerbebida}}>
-                 <Admmy ></Admmy>
+          <div style={{ display: containerbebida }}>
+            <Admmy ></Admmy>
           </div>
-        
+
 
 
 
 
         </div>
         <ToastContainer autoClose={3000} position={toast.POSITION.BOTTOM_LEFT} />
-       
+
       </div>
       <div id='container-btn-adm' style={{ marginTop: "10vh" }}>
 
