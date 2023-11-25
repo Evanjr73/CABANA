@@ -77,27 +77,32 @@ const Gridbebidas = ({ users, setUsers, setOnEdit }) => {
     return (
 
         <>
-            <ul id="COMIDAS" >
+            <div>
+                <div className="rotulo"><h1>BEBIDAS</h1></div>
 
-                {users.map((item, i) => (
+                <ul  >
 
-                    <li id="" className="listadecomidas"  >
-                        <p style={{ height: "25px" }} >{item.nomel} </p>
-                        {/* <img src={comida} className="imagensdocardapio" alt="" /> */}
+                    {users.map((item, i) => (
 
-                        <p style={{ height: "20px" }}>{item.valor}</p>
-                        <div className="paragrafo" style={{ padding: "10px" }} >
-                            {
-                                pe && <p style={{ height: listaheig, fontSize: "15px" }}>{item.sobre}</p>
-                            }
-                        </div>
+                        <li id="" className="listadecomidas"  >
+                            <p style={{ height: "25px" }} >{item.nomel} </p>
+                            {/* <img src={comida} className="imagensdocardapio" alt="" /> */}
 
-                        {/* <button className="button-17">FAZER PEDIDO</button> */}
-                        <button className="button-17" onClick={handleClickparagraf} style={{ margin: "10px" }}>SOBRE O PRATO</button>
-                    </li>
-                ))}
+                            <p style={{ height: "20px" }}>{item.valor}</p>
+                            <div className="paragrafo" style={{ padding: "10px" }} >
+                                {
+                                    pe && <p style={{ height: listaheig, fontSize: "15px" }}>{item.sobre}</p>
+                                }
+                            </div>
 
-            </ul>
+                            {/* <button className="button-17">FAZER PEDIDO</button> */}
+                            <button className="button-17" onClick={handleClickparagraf} style={{ margin: "10px" }}>SOBRE O PRATO</button>
+                        </li>
+                    ))}
+
+                </ul>
+            </div>
+
         </>
         // <Table>
         //   <Thead>

@@ -114,7 +114,7 @@ function Carda() {
 
                   </div>
 
-                  <main style={{ height: fixar, height:"80px" }}>
+                  <main style={{ height: fixar, height:"60px" }}>
 
                         <button className="butt" onClick={handleClickMen} style={{ display: buto, height: fixar }} >CARDAPIO</button>
                         <button className="butt" onClick={handleClickMenu} style={{ display: buton, height: fixar }}>FECHAR</button>

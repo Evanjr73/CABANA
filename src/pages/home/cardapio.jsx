@@ -72,19 +72,15 @@ function Cardapio() {
 
   return (
     <>
-        <div id="bttn-op" className="tabs" style={{ display: "flex" }} >
-          <button className="butto" onClick={handleClickComidas} style={{ borderRadius: "10px" }} >COMIDAS</button>
-          <button className="butto" onClick={handleClickBebidas} style={{ borderRadius: "10px" }} >BEBIDAS</button>
-        </div>
-
+       
 
       <div id="opçoes">
 
+            {/* <Comidas></Comidas>
             <Comidas></Comidas>
             <Comidas></Comidas>
-            <Comidas></Comidas>
-            <Comidas></Comidas>
-                    {/* <div style={{ display: comidas }} className="grid-menu" >
+            <Comidas></Comidas> */}
+        <div style={{ display: comidas }} className="grid-menu" >
           <Gridmenu setOnEdit={setOnEdit} users={users} setUsers={setUsers}></Gridmenu>
 
         </div>
@@ -92,7 +88,7 @@ function Cardapio() {
         <div style={{ display: bebidas }} className="grid-menu" >
           <Gridbebidas users={user} setUsers={setUser}></Gridbebidas>
 
-        </div> */}
+        </div>
 
         {/* <div style={{ display: comidas }} className="grid-menu" >
                     <Gridbebidas setOnEdit={setOnEdit} user={user} setUser={setUser}></Gridbebidas>
@@ -108,6 +104,11 @@ function Cardapio() {
 
 
       </div>
+      <div id="bttn-op" className="tabs" style={{ display: "flex"  }} >
+          <button className="butto" onClick={handleClickComidas} style={{ borderRadius: "10px" }} >COMIDAS</button>
+          <button className="butto" onClick={handleClickBebidas} style={{ borderRadius: "10px" }} >BEBIDAS</button>
+        </div>
+
 
     </>
   )

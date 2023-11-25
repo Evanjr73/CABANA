@@ -79,51 +79,31 @@ const Gridmenu = ({ users, setUsers, setOnEdit }) => {
     return (
 
         <>
-            <ul id="COMIDAS" >
+            <div >
+                <div className="rotulo"><h1>COMIDAS</h1></div>
+                <ul >
 
-                {users.map((item, i) => (
+                    {users.map((item, i) => (
 
-                    <li id="" className="listadecomidas"  >
-                        <p style={{ height: "25px" }} >{item.nomel} </p>
-                        {/* <img src={comida} className="imagensdocardapio" alt="" /> */}
+                        <li id="" className="listadecomidas"  >
+                            <p style={{ height: "25px" }} >{item.nomel} </p>
+                            {/* <img src={comida} className="imagensdocardapio" alt="" /> */}
 
-                        <p style={{ height: "20px" }}>{item.valor}R$</p>
-                        <div className="paragrafo" style={{ padding: "10px" }} >
-                            {
-                                pe && <p style={{ height: listaheig, fontSize: "15px" }}>{item.sobre}</p>
-                            }
-                        </div>
+                            <p style={{ height: "20px" }}>{item.valor}R$</p>
+                            <div className="paragrafo" style={{ padding: "10px" }} >
+                                {
+                                    pe && <p style={{ height: listaheig, fontSize: "15px" }}>{item.sobre}</p>
+                                }
+                            </div>
 
-                        {/* <button className="button-17">FAZER PEDIDO</button> */}
-                        <button className="button-17" onClick={handleClickparagraf} style={{ margin: "10px" }}>SOBRE O PRATO</button>
-                    </li>
-                ))}
+                            {/* <button className="button-17">FAZER PEDIDO</button> */}
+                            <button className="button-17" onClick={handleClickparagraf} style={{ margin: "10px" }}>SOBRE O PRATO</button>
+                        </li>
+                    ))}
 
-            </ul>
+                </ul>
+            </div>
         </>
-        // <Table>
-        //   <Thead>
-        //     <Tr>
-        //       <Th>Nome</Th>
-        //       <Th>valor</Th>
-        //       <Th onlyWeb>sobre</Th>
-        //       <Th></Th>
-        //       <Th></Th>
-        //     </Tr>
-        //   </Thead>
-        //   <Tbody>
-        //     {users.map((item, i) => (
-        //       <Tr key={i}>
-        //         <Td width="30%">{item.nomel}</Td>
-        //         <Td width="30%">{item.valor}</Td>
-        //         <Td width="20%" >
-        //           {item.sobre}
-        //         </Td>
-
-        //       </Tr>
-        //     ))}
-        //   </Tbody>
-        // </Table>
 
 
     );
