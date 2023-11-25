@@ -32,6 +32,7 @@ function Carda() {
       const [cardapio1, setCardapio1] = useState("0vh")
       const [containerhome, setContainerhome] = useState("60vh")
       const [fixar, setFixar] = useState("7vh")
+      const [fixar2, setFixar2] = useState("9vh")
       const history = useNavigate();
 
       ////////////bamco de dados/////////
@@ -63,6 +64,7 @@ function Carda() {
             setButon("flex")
             setContainerhome("0vh")
             setFixar("3vh")
+            setFixar2("5vh")
             setMen(!men);
             setButo("none")
             setCardapio1("80vh")
@@ -72,6 +74,7 @@ function Carda() {
       const handleClickMenu = () => {
             setButon("none")
             setFixar("7vh")
+            setFixar2("9vh")
             setContainerhome("60vh")
             setMen(!men);
             setButo("flex")
@@ -114,7 +117,7 @@ function Carda() {
 
                   </div>
 
-                  <main style={{ height: fixar, height:"60px" }}>
+                  <main style={{ height: fixar2 }}>
 
                         <button className="butt" onClick={handleClickMen} style={{ display: buto, height: fixar }} >CARDAPIO</button>
                         <button className="butt" onClick={handleClickMenu} style={{ display: buton, height: fixar }}>FECHAR</button>
