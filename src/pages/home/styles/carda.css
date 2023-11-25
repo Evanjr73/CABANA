@@ -146,15 +146,7 @@ li{
 }
 
 
-#cardapio1{
 
-  position: relative;
-  background-color: #4285f4;
-  overflow-y: scroll ;
-  height: 25vh;
-  width: 100vw;
-  
-}
 .clai{
   height: 40vh;
   width: 20vw;

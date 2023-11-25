@@ -1,8 +1,12 @@
 import React from "react";
-import "./carda.css"
+//// CSS/////
+import "./styles/carda.css"
+import "./styles/cardapio.css"
+import "./styles/container-mar.css"
+import "./styles/sobre.css"
+//////////////////////////
 import { useState } from "react";
 import imagem from "./logo.png";
-import "./cardapio.css"
 import Cardapio from "./cardapio";
 import { useNavigate } from 'react-router-dom';
 ///////// banco de dados///////////
@@ -21,7 +25,7 @@ function Carda() {
 
 
 
-
+      const [buttonsobre , setButtonsobre] = useState(false)
       const [buton, setButon] = useState("none"); //CARDAPIO
       const [buto, setButo] = useState("flex"); //X
       const [men, setMen] = useState(false);
@@ -36,16 +40,16 @@ function Carda() {
 
       const getUsers = async () => {
             try {
-              const res = await axios.get("http://localhost:8800");
-              setUsers(res.data.sort((a, b) => (a.nomel > b.nomel ? 1 : -1)));
+                  const res = await axios.get("http://localhost:8800");
+                  setUsers(res.data.sort((a, b) => (a.nomel > b.nomel ? 1 : -1)));
             } catch (error) {
-              toast.error(error);
+                  toast.error(error);
             }
-          };
-        
-          useEffect(() => {
+      };
+
+      useEffect(() => {
             getUsers();
-          }, [setUsers]);
+      }, [setUsers]);
       ////////////////////////////////////
 
       const handleClickadm = () => {
@@ -76,21 +80,23 @@ function Carda() {
 
       }
 
+      const handleClicksobre = () => {
+            setButtonsobre(!buttonsobre)
+      }
 
-    
-     
+
 
 
 
       return (
 
 
-            <>    
-                  
-                  <header style={{width:"100vw", height:"4vh"}}>
-                        <button className="BUTT" style={{width:"20vw", margin:"0.4rem"}} onClick={handleClickadm}>ADM</button>
+            <>
+
+                  <header style={{ width: "100vw", height: "4vh" }}>
+                        <button className="BUTT" style={{ width: "20vw", margin: "0.4rem" }} onClick={handleClickadm}>ADM</button>
                   </header>
-                  <nav style={{display: buton}} >
+                  <nav style={{ display: buton }} >
                         <h1>RESTAURANTE</h1>
 
                   </nav>
@@ -108,7 +114,7 @@ function Carda() {
 
                   </div>
 
-                  <main style={{ height: fixar }}>
+                  <main style={{ height: fixar, height:"80px" }}>
 
                         <button className="butt" onClick={handleClickMen} style={{ display: buto, height: fixar }} >CARDAPIO</button>
                         <button className="butt" onClick={handleClickMenu} style={{ display: buton, height: fixar }}>FECHAR</button>
@@ -128,20 +134,23 @@ function Carda() {
                   </div>
                   <div id="sobrenos" >
                         <h1>SOBRE NÓS</h1>
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti facere maxime
+
+                        {buttonsobre &&  <div style={{width:"80vw" , backgroundColor:"white" , padding:"1.5rem", borderRadius:"8px"}}><h3 style={{transition:"1s"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti facere maxime
                               sequi natus dolore architecto sit. Nam ipsa consequatur totam, repellat in
                               deserunt sint iste enim. Facilis est voluptatem reprehenderit? Lorem, ipsum
                               dolor sit amet consectetur adipisicing elit. Ipsam ad iure unde voluptatum
                               numquam molestiae beatae ut officia illum dolore nulla soluta pariatur, repre
-                              henderit provident labore quae aut dolorem harum.</h3>
+                              henderit provident labore quae aut dolorem harum.</h3></div>}
+                       
+
+                        <button className="sobre-nos-buton"  onClick={handleClicksobre}></button>
                   </div>
 
                   <section>
-                        <div id="cardapio1" style={{ height: "170vh" }}>
-                              <h1></h1>
-                        </div>
-                        <div id="cardapio1" style={{ backgroundColor: "red" }}>
-                              <h1></h1>
+                        <div className="container-mar-fone" >
+
+                              <a href=""><button type="button" className="img-whatsapp"></button></a>
+                              <h1 style={{fontSize:"30px"}}>(73) 988964184</h1>
                         </div>
 
                   </section>

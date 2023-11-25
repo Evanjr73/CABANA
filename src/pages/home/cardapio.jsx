@@ -14,35 +14,36 @@ import Gridbebidas from "../adm/components/Gridbebidas";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import Comidas from "../../frag/comidas";
 /////////////////////////////////////////
 
 function Cardapio() {
-    const [bebidas, setBebidas] = useState("grid");
+  const [bebidas, setBebidas] = useState("grid");
 
-    const [comidas, setComidas] = useState("grid");
-    const handleClickComidas = () => {
-        setBebidas("none"), setComidas("grid")
-        // setComidas(!comidas);
-        // setComidass("grid")
-        // setBebidas("none")
-        console.log("click comidas ")
+  const [comidas, setComidas] = useState("grid");
+  const handleClickComidas = () => {
+    setBebidas("none"), setComidas("grid")
+    // setComidas(!comidas);
+    // setComidass("grid")
+    // setBebidas("none")
+    console.log("click comidas ")
 
 
   }
   const handleClickBebidas = () => {
-        setComidas("none"), setBebidas("grid")
-        // setBebidas(!bebidas);
-        // setBebidass("grid")
-        // setComidass("none")
+    setComidas("none"), setBebidas("grid")
+    // setBebidas(!bebidas);
+    // setBebidass("grid")
+    // setComidass("none")
 
-        console.log("clique bebidas")
+    console.log("clique bebidas")
 
   }
 
 
-  
+
   const [users, setUsers] = useState([]);
-  const [user , setUser] = useState([])
+  const [user, setUser] = useState([])
   const [onEdit, setOnEdit] = useState(null);
 
   const getUsers = async () => {
@@ -66,44 +67,49 @@ function Cardapio() {
   useEffect(() => {
     getUsers(), getBebidas();
   }, [setUsers, setUser]);
- 
+
   ////////////////
 
-    return (
-        <>
-            <div id="bttn-op" className="tabs" style={{ display: "flex" }} >
-                <button className="butto" onClick={handleClickComidas} style={{borderRadius:"10px"}} >COMIDAS</button>
-                <button className="butto" onClick={handleClickBebidas} style={{borderRadius:"10px"}} >BEBIDAS</button>
-            </div>
-
-            <div id="opçoes">
+  return (
+    <>
+        <div id="bttn-op" className="tabs" style={{ display: "flex" }} >
+          <button className="butto" onClick={handleClickComidas} style={{ borderRadius: "10px" }} >COMIDAS</button>
+          <button className="butto" onClick={handleClickBebidas} style={{ borderRadius: "10px" }} >BEBIDAS</button>
+        </div>
 
 
+      <div id="opçoes">
 
-            <div style={{ display: comidas }} className="grid-menu" >
-                    <Gridmenu setOnEdit={setOnEdit} users={users} setUsers={setUsers}></Gridmenu>
-                   
-                </div>
+            <Comidas></Comidas>
+            <Comidas></Comidas>
+            <Comidas></Comidas>
+            <Comidas></Comidas>
+                    {/* <div style={{ display: comidas }} className="grid-menu" >
+          <Gridmenu setOnEdit={setOnEdit} users={users} setUsers={setUsers}></Gridmenu>
 
-                <div style={{ display: bebidas }} className="grid-menu" >
-                    <Gridbebidas  users={user} setUsers={setUser}></Gridbebidas>
-                   
-                </div>
+        </div>
 
-                {/* <div style={{ display: comidas }} className="grid-menu" >
+        <div style={{ display: bebidas }} className="grid-menu" >
+          <Gridbebidas users={user} setUsers={setUser}></Gridbebidas>
+
+        </div> */}
+
+        {/* <div style={{ display: comidas }} className="grid-menu" >
                     <Gridbebidas setOnEdit={setOnEdit} user={user} setUser={setUser}></Gridbebidas>
                 </div> */}
 
-               
+
+
+
+    
 
 
 
 
 
+      </div>
 
-            </div>
-
-        </>
-    )
+    </>
+  )
 }
 export default Cardapio
