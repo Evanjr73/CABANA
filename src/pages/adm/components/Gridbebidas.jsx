@@ -32,32 +32,30 @@ export const Th = styled.th`
 
 export const Td = styled.td`
   padding-top: 15px;
-  text-align: ${(props) => (props.alignCenter ? "center" : "start")};
+ 
   width: ${(props) => (props.width ? props.width : "auto")};
 
-  @media (max-width: 500px) {
-    ${(props) => props.onlyWeb && "display: none"}
-  }
+
 `;
 
-const Gridbebidas = ({ users, setUsers, setOnEdit }) => {
-    const handleEdit = (item) => {
-        setOnEdit(item);
-    };
+const Gridbebidas = ({ users }) => {
+    // const handleEdit = (item) => {
+    //     setOnEdit(item);
+    // };
 
-    const handleDelete = async (id) => {
-        await axios
-            .delete("http://localhost:8800/bebidas" + id)
-            .then(({ data }) => {
-                const newArray = users.filter((user) => user.id !== id);
+    // const handleDelete = async (id) => {
+    //     await axios
+    //         .delete("http://localhost:8800/bebidas" + id)
+    //         .then(({ data }) => {
+    //             const newArray = users.filter((user) => user.id !== id);
 
-                setUsers(newArray);
-                toast.success(data);
-            })
-            .catch(({ data }) => toast.error(data));
+    //             setUsers(newArray);
+    //             toast.success(data);
+    //         })
+    //         .catch(({ data }) => toast.error(data));
 
-        setOnEdit(null);
-    };
+    //     setOnEdit(null);
+    // };
 
 
 
@@ -70,7 +68,7 @@ const Gridbebidas = ({ users, setUsers, setOnEdit }) => {
 
     const handleClickparagraf = () => {
 
-        setListaheig("20vh")
+        setListaheig("5vh")
         setPe(!pe)
 
     }
@@ -88,7 +86,7 @@ const Gridbebidas = ({ users, setUsers, setOnEdit }) => {
                             <p style={{ height: "25px" }} >{item.nomel} </p>
                             {/* <img src={comida} className="imagensdocardapio" alt="" /> */}
 
-                            <p style={{ height: "20px" }}>{item.valor}</p>
+                            <p style={{ height: "20px" }}>{item.valor} R$</p>
                             <div className="paragrafo" style={{ padding: "10px" }} >
                                 {
                                     pe && <p style={{ height: listaheig, fontSize: "15px" }}>{item.sobre}</p>

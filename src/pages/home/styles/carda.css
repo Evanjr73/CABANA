@@ -65,7 +65,7 @@ main{
     justify-content: center;
     text-align: center;
     padding: 15px;
-    background-color: white;
+    background-color: rgb(221, 208, 208);
     height: 7vh;
 }
 #opçoes{

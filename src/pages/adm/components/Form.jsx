@@ -39,24 +39,9 @@ const Button = styled.button`
   height: 42px;
 `;
 
-const Form = ({ getUsers, onEdit, setonEdit, }) => {
+const Form = ({ getUsers, onEdit, setOnEdit, }) => {
   const ref = useRef();
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
 
-    if (file) {
-      const reader = new FileReader();
-
-      reader.onloadend = () => {
-        setSelectedImage(reader.result);
-      };
-
-      reader.readAsDataURL(file);
-    }
-
-
-
-  }
 
   useEffect(() => {
     if (onEdit) {
@@ -124,7 +109,7 @@ const Form = ({ getUsers, onEdit, setonEdit, }) => {
     user.imagem.value = "";
     user.pessoas.value = "";
 
-    setonEdit(null);
+    setOnEdit(null);
     getUsers();
   };
 

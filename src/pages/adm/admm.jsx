@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './adm.css';
+
 import GlobalStyle from "./styles/global.js";
 import styled from "styled-components";
 import Form from "./components/Form.jsx";
@@ -60,7 +61,7 @@ function Admm() {
             </Container>
 
 
-            <ToastContainer autoClose={3000} position={toast.POSITION.BOTTOM_LEFT} />
+            {/* <ToastContainer autoClose={3000} position={toast.POSITION.BOTTOM_LEFT} /> */}
             <GlobalStyle />
 
 
@@ -72,7 +73,7 @@ function Admm() {
                 <Grid setOnEdit={setOnEdit} users={users} setUsers={setUsers} />
 
             </div>
-
+            
 
         </div>
 

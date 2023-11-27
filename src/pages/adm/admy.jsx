@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './adm.css';
-import GlobalStyle from "./styles/global.js";
-import Formy from "./components/Formy.jsx"
+import GlobalStyle from "./styles/global.js";import Formy from "./components/Formy.jsx"
 import styled from "styled-components";
 import Form from "./components/Form.jsx";
 import Grid from "./components/Grid.jsx";
+import Gridy from "./components/Gridy.jsx";
 import { useEffect } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -61,7 +61,7 @@ function Admmy() {
             </Container>
 
 
-            <ToastContainer autoClose={3000} position={toast.POSITION.BOTTOM_LEFT} />
+            {/* <ToastContainer autoClose={3000} position={toast.POSITION.BOTTOM_LEFT} /> */}
             <GlobalStyle />
 
 
@@ -70,9 +70,10 @@ function Admmy() {
 
 
             <div id='container-btn-adm' style={{ marginTop: "10vh" }}>
-                <Grid setOnEdit={setOnEdit} users={users} setUsers={setUsers} />
+                <Gridy setOnEdit={setOnEdit} users={users} setUsers={setUsers} />
 
             </div>
+            {/* <ToastContainer autoClose={3000} position={toast.POSITION.BOTTOM_LEFT} /> */}
 
 
         </div>

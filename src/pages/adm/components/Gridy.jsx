@@ -45,15 +45,17 @@ const Gridy = ({ users, setUsers, setOnEdit }) => {
   };
 
   const handleDelete = async (id) => {
+    console.log("delete")
     await axios
       .delete("http://localhost:8800/bebidas/" + id )
       .then(({ data }) => {
         const newArray = users.filter((user) => user.id !== id);
-
+        
         setUsers(newArray);
         toast.success(data);
       })
       .catch(({ data }) => toast.error(data));
+    
 
     setOnEdit(null);
   };
@@ -80,7 +82,7 @@ const Gridy = ({ users, setUsers, setOnEdit }) => {
             <Td alignCenter width="5%">
               <FaEdit onClick={() => handleEdit(item)} />
             </Td>
-            <Td alignCenter width="5%">
+            <Td  width="5%">
               <FaTrash onClick={() => handleDelete(item.id)} />
             </Td>
           </Tr>

@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { FaTrash, FaEdit } from "react-icons/fa";
 import { toast } from "react-toastify";
 
+
+
 const Table = styled.table`
   width: 100%;
   background-color: #fff;
@@ -45,6 +47,7 @@ const Grid = ({ users, setUsers, setOnEdit }) => {
   };
 
   const handleDelete = async (id) => {
+    console.log("delete")
     await axios
       .delete("http://localhost:8800/" + id )
       .then(({ data }) => {
