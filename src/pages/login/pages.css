@@ -9,9 +9,9 @@
     
     display: flex;
     margin: auto;
-    margin-top: 19vh;
-    height: 40vh;
-    width: 30vh;
+    margin-top: 17vh;
+    height: 45vh;
+    width: 37vh;
     background-color: aqua;
     display: flex;
     flex-direction: column;
@@ -19,6 +19,7 @@
     justify-content: center;
     border-radius: 8px;
     padding: 2vh;
+    box-shadow: rgba(0, 0, 0, 0.716) 0px 5px 15px;
 }
 .input{
     height: 5vh;
