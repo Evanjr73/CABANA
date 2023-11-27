@@ -130,6 +130,7 @@ ul{
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.859) 0px 5px 15px;
 }
 p{
     height: 10px;
@@ -140,13 +141,13 @@ li{
     justify-items: center;
     gap: 0px;
     grid-template-columns: repeat(1, 1fr);
-    background-color: rgb(218, 216, 216);
+    background-color: rgba(82, 136, 136, 0.785);
     height: auto;
     width: 20vh;
     padding: 2px;
     margin-top: 10px;
     border-radius: 14px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.997) 0px 5px 15px;
 }
 .grid-menu{
   padding: 5px;
