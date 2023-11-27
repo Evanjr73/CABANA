@@ -64,12 +64,29 @@ const Gridbebidas = ({ users }) => {
 
     const [listaheig, setListaheig] = useState('0vh')
     const [wi, setWi] = useState("20vh")
-    const [pe, setPe] = useState(false)
+    // const [pe, setPe] = useState(false)
+    const[ pe, setPe] = useState("none")
+    const [pe2, setPe2] = useState("flex")
+    const [pe3, setPe3] = useState("none")
+
 
     const handleClickparagraf = () => {
 
         setListaheig("5vh")
-        setPe(!pe)
+        setPe("flex")
+        setPe2("none")
+        setPe3("flex")
+        // setPe(!pe)
+
+    }
+    const handleClickparagra = () => {
+
+        setListaheig("5vh")
+        setPe("none")
+        setPe2("flex")
+        setPe3("none")
+        
+        // setPe(!pe)
 
     }
     return (
@@ -88,13 +105,13 @@ const Gridbebidas = ({ users }) => {
 
                             <p style={{ height: "20px" }}>{item.valor} R$</p>
                             <div className="paragrafo" style={{ padding: "10px" }} >
-                                {
-                                    pe && <p style={{ height: listaheig, fontSize: "15px" }}>{item.sobre}</p>
-                                }
+                                <p style={{ height: listaheig, fontSize: "15px" , display:pe}}>{item.sobre}</p>
+                            
                             </div>
 
                             {/* <button className="button-17">FAZER PEDIDO</button> */}
-                            <button className="button-17" onClick={handleClickparagraf} style={{ margin: "10px" }}>SOBRE O PRATO</button>
+                            <button className="button-17" onClick={handleClickparagraf} style={{ margin: "10px", display:pe2 }}>SOBRE O PRATO</button>
+                            <button className="button-17" onClick={handleClickparagra} style={{ margin: "10px" ,display:pe3 }}>SOBRE O PRATO</button>
                         </li>
                     ))}
 
