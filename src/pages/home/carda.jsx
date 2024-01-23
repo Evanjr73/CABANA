@@ -59,6 +59,15 @@ function Carda() {
       }
 
       //CARDAPIO
+      const [animalogo, setAnimalogo] = useState("")
+
+      const handledeta = () => {
+  
+          setAnimalogo("rodar 2s alternate")
+  
+  
+  
+      }
 
       const handleClickMen = () => {
             setButon("flex")
@@ -135,10 +144,10 @@ function Carda() {
 
 
                   </div>
-                  <div id="sobrenos" >
+                  <div id="sobrenos"  onClick={handledeta}>
                         <h1>SOBRE NÓS</h1>
 
-                        {buttonsobre &&  <div style={{width:"80vw" , backgroundColor:"white" , padding:"1.5rem", borderRadius:"8px"}}><h3 style={{transition:"1s"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti facere maxime
+                        {buttonsobre &&  <div style={{animation:animalogo ,width:"80vw" , backgroundColor:"white" , padding:"1.5rem", borderRadius:"8px"}}><h3 style={{transition:"1s"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti facere maxime
                               sequi natus dolore architecto sit. Nam ipsa consequatur totam, repellat in
                               deserunt sint iste enim. Facilis est voluptatem reprehenderit? Lorem, ipsum
                               dolor sit amet consectetur adipisicing elit. Ipsam ad iure unde voluptatum

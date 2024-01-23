@@ -9,8 +9,19 @@ nav{
     padding: 2px;
     background-color: rgba(41, 38, 204, 0.889);
     height: 4vh;
+   
     
 
+}
+#rod{
+  /* animation: loading 6s linear infinite; */
+
+}
+
+@keyframes loading {
+  to{
+    transform: rotate(360deg);
+  }
 }
 nav > h1 {
   margin-top: 1vh;
@@ -53,6 +64,16 @@ nav > button{
 }
 section{
  position: absolute;
+}
+@keyframes rodar {
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sobre-nos-buton{
+  animation: rodar 3s alternate;
 }
 #imghome{
 
