@@ -1,10 +1,7 @@
 import React from "react";
-import axios from "axios";
+
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
-import { FaTrash, FaEdit } from "react-icons/fa";
-import { toast } from "react-toastify";
-import comida from "../../../frag/comidas.png"
+
 
 import { useState } from "react";
 const Table = styled.table`
@@ -80,7 +77,7 @@ const Gridmenu = ({ users}) => {
         <>
             <div >
                 <div className="rotulo"><h1>COMIDAS</h1></div>
-                <ul >
+                <ul className="ultyled" >
 
                     {users.map((item, i) => (
 
